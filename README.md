@@ -1,2 +1,2 @@
-### Installations
-Contains installation steps and examples for deploys as per current year.
+### Deployement
+Contains deployment steps and examples for various as per current versions.
