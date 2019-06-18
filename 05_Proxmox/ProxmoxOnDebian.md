@@ -1,0 +1,40 @@
+### 1. Install Debian
+### 2. Install Proxmox
+As root:
+##### Configure network:
+```bash
+# 127.0.1.1     <hostname>
+192.168.1.35    <hostname> pvelocalhost
+```
+##### Install Proxmox:
+```bash
+echo "deb http://download.proxmox.com/debian/pve stretch pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
+wget http://download.proxmox.com/debian/proxmox-ve-release-5.x.gpg -O /etc/apt/trusted.gpg.d/proxmox-ve-release-5.x.gpg
+chmod +r /etc/apt/trusted.gpg.d/proxmox-ve-release-5.x.gpg 
+apt update && apt dist-upgrade
+apt install proxmox-ve postfix open-iscsi # skip postfix, open-iscsi if not needed
+apt remove os-prober
+# optional
+apt remove linux-image-amd64 linux-image-4.9.0-3-amd64
+```
+Reboot
+```bash
+init 6
+```
+Connect
+```html
+https://192.168.1.35:8006/#v1:0:=node%2Fq190:4:=jsconsole:::::
+```
+##### Create bridge for containers
+1. Create bridge in Proxmox in node / Network / Create / Use Router IP as Gateway
+2. Update bridge
+```bash
+cat /etc/network/interfaces
+iface enp4s0 inet manual  # physical interface, will be brought up by bridge
+auto vmbr0              # bridge
+iface vmbr0 inet dhcp   # use DHCP
+	gateway  192.168.1.0  # LAN Router / Gateway
+	bridge-ports enp4s0   # physical interface that the bridge would use
+	bridge-stp off
+	bridge-fd 0
+  ```

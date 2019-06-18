@@ -1,2 +1,2 @@
-# Deploy2019
-How to's for Deployment and DevOps
+### Installations
+Contains installation steps and examples for deploys as per current year.
