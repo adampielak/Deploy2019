@@ -32,6 +32,10 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 ```
+Verify:
+```bash
+go version
+```
 (GOROOT - folder where the tar was unzipped ):
 
 For gotest to work enable execution on /tmp:
