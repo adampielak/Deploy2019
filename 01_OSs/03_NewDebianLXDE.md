@@ -26,6 +26,8 @@ The start-up script is ~/.bashrc, not ~/.bash_profile or ~/.profile.
 e. Browser install:
 ```bash
 apt install slimjet # or download and gdebi slimjet_amd64.deb
+# Firefox install:
+apt-get install iceweasel
 ```
 f. Document viewer:
 ```bash
