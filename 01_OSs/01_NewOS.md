@@ -184,7 +184,7 @@ start headless:
 vboxheadless --startvm <name>
 ```
 #### 21. LibreOffice
-``bash
+```bash
 sudo apt-add-repository ppa:libreoffice/ppa
 sudo apt update
 sudo apt-get install libreoffice
