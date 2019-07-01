@@ -193,3 +193,7 @@ sudo apt-get install libreoffice-writer
 # or
 sudo apt-get install libreoffice-calc
 ```
+#### 22. Calculator
+```bash
+sudo apt install galculator
+```
