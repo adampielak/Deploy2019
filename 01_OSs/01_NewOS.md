@@ -5,26 +5,24 @@ download and run the AppImage with sudo.
 sudo gparted  //delete any partitions on stick
 ```
 
-1. TeamViewer
+#### 1. TeamViewer
 ```html
 https://www.teamviewer.com/en/download/linux/
 ```
 
-2. Change timezone:
+#### 2. Change timezone:
 ```bash
 sudo timedatectl set-timezone Europe/Bucharest
 ```
 
-3. Git
+#### 3. Git
 prerequisites: 
 ```bash
 sudo apt-get install build-essential
 sudo apt-get update
 sudo apt-get install git
 ```
-
-4. Firefox optimization and bookmarks
-
+#### 4. Firefox optimization and bookmarks
 SSD optimization:
 about:config
 browser.cache.disk.enable - set to false
@@ -35,7 +33,7 @@ create key for memory cache, right click with type integer:
 disk.cache.memory.capacity
 131072 for 128 Mb. value in KB
 
-5. RAM Disk
+#### 5. RAM Disk
 ```bash
 sudo mkdir /mnt/tmpfs.ramdisk
 sudo vi /etc/fstab
@@ -46,20 +44,20 @@ Make terminal shortcut open in RAM disk:
 ```bash
 xfce4-terminal --default-working-directory=/home/user/ram
 ```
-
-6. SSH Key
+#### 6. SSH Key
 ```bash
 ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
-
-7.VLC
+#### 7.VLC
+```html
 https://community.linuxmint.com/software/view/vlc
+```
 *if no image but sound change the video output to X11
 
 mpeg 4 AAC codec for burner: sudo apt-get install gstreamer1.0-libav
 
-8.JavaScript Editor
+#### 8.JavaScript Editor
 http://brackets.io/
 https://code.visualstudio.com/
 
@@ -113,81 +111,56 @@ body {
 
 First time to trigger the compilation update the scss file. This should trigger the transpiler.
 
-9.Disk burner:
+#### 9.Disk burner:
 K3b - Disk Burning
 
-10.wine:
+#### 10.wine:
 ```bash
 sudo apt update
 sudo apt-get install wine wine32 wine-stable
 ```
-
-15.Mikrotik Winbox:
+#### 11.Mikrotik Winbox:
 ```bash
 wget http://www.mikrotik.com/download/winbox.exe
 wine winbox.exe
 ```
-
 alternative for finding IPs on LAN:
 ```bash
 nmap -sP 192.168.1.0-45
 ```
-
-16. SlimJet browser for default browsing.
+#### 12. SlimJet browser for default browsing.
 ```bash
 sudo apt install slimjet
 ```
 Set cache for for RAM disk.
 
-17. Midnight Commander
+#### 13. Midnight Commander
 ```bash
 sudo apt install mc
 ```
-
-18. 7zip
+#### 14. 7zip
 ```bash
 sudo apt-get install p7zip-full p7zip-rar
 ```
-
-20. Youtube Clip Grab
-```bash
-sudo apt-get install ffmpeg
-```
-Go to ClipGrab site and download AppImage.
-```bash
-chmod +x AppImage
-```
-Run AppImage as normal executable as needed.
-
-```bash
-sudo add-apt-repository ppa:clipgrab-team/ppa
-sudo apt-get update
-sudo apt-get install clipgrab
-```
-remove with:
-```bash
-sudo apt-get remove clipgrab
-sudo add-apt-repository --remove ppa:clipgrab-team/ppa
-```
-
 convert to mp3:
 ```bash
 ffmpeg -i file.mp4 -b:a 192k file.mp3
 ```
-
-21. Remote Desktop like:
+#### 15. Remote Desktop like:
 server:
+```html
 https://wiki.x2go.org/doku.php/doc:installation:x2goserver
-
+```
 connecting client:
+```html
 https://wiki.x2go.org/doku.php/doc:installation:x2goclient
-
-22. Color picker:  
+```
+#### 16. Color picker:  
 ```bash
 sudo apt-get install gpick
 ```
-23. QPDF for PDF documents.
-24. Screen capture:
+#### 17. QPDF for PDF documents.
+#### 18. Screen capture:
 http://shutter-project.org/downloads/
 ```bash
 sudo add-apt-repository ppa:shutter/ppa
@@ -197,19 +170,26 @@ remove:
 ```bash
 sudo rm /etc/apt/sources.list.d/ppa_shutter_ppa_tara.list
 ```
-25. Photo Viewer
+#### 19. Photo Viewer
 ```bash
 sudo apt-get install gthumb
 ```
-26. VirtualBox
+#### 20. VirtualBox
 ```bash
 sudo apt-get install dkms
 wget http://download.virtualbox.org/virtualbox/5.2.14/virtualbox-5.2_5.2.14-123301~Ubuntu~bionic_amd64.deb
 ```
-
 start headless:
 ```bash
 vboxheadless --startvm <name>
 ```
-
-27. Decrease number of workspaces to 2 from Workspaces item in Start Menu / All or from Settings Manager.
+#### 21. LibreOffice
+``bash
+sudo apt-add-repository ppa:libreoffice/ppa
+sudo apt update
+sudo apt-get install libreoffice
+# or
+sudo apt-get install libreoffice-writer
+# or
+sudo apt-get install libreoffice-calc
+```
