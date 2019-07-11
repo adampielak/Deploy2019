@@ -35,7 +35,7 @@ apt install -y qpdfview vim scite
 ```
 g. Media support:
 ```bash
-apt install -y mpv gthumb deluge k3b
+apt install -y mpv nomacs deluge k3b
 ```
 h. Install file manager:
 ```bash
