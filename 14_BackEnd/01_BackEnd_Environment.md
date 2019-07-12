@@ -60,7 +60,11 @@ sudo tar -C /usr/local -xzf <new version>
 ```
 
 3. LiteIDE download from https://github.com/visualfc/liteide/releases
-* version with qt 4.8.7
+```html
+https://github.com/visualfc/liteide/releases/download/x36/liteidex36.linux64-qt5.5.1.AppImage
+```
+* version with qt 5.x.y
+* version as AppImage
 * view->options->LiteEditor->Fonts&Colors->Sublime
 
 Create desktop shortcut:
