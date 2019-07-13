@@ -69,7 +69,11 @@ Exec=pcmanfm -n "/media/tudi/system/01_ToRead/Go_Books (from vault)"
 Name=Go
 GenericName=Go
 ```
-##### g. Enable numlock after boot. See: https://askubuntu.com/questions/155679/how-to-enable-numlock-at-boot-time-for-login-screen
+##### m. Enable numlock after boot. 
+See:
+```html
+https://askubuntu.com/questions/155679/how-to-enable-numlock-at-boot-time-for-login-screen
+```
 ```bash
 sudo apt install numlockx
 sudo vi /etc/lightdm/lightdm.conf
