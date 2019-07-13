@@ -1,14 +1,12 @@
-a. Install base. Remove cdrom entries in sources:
+##### a. Install base. Remove cdrom entries in sources:
 ```bash
 vi /etc/apt/sources.list
 ```
-b. Install LXDE minimal:
+##### b. Install LXDE minimal:
 ```bash
 apt install lxde-core
 ```
-c. Install unrar non-free as download, see: https://packages.debian.org/stretch/amd64/unrar/download
-
-d. Apps optimization:
+##### c. Apps optimization:
 ```bash
 apt install -y lxterminal gdebi
 apt autoremove -y termit lxtask nano xscreensaver
@@ -23,25 +21,25 @@ If preferences not saved make sure file exists and user owns:
 LXTerminal is a non-login shell. 
 The start-up script is ~/.bashrc, not ~/.bash_profile or ~/.profile.
 
-e. Browser install:
+##### d. Browser install:
 ```bash
 apt install slimjet # or download and gdebi slimjet_amd64.deb
 # Firefox install:
 apt-get install iceweasel
 ```
-f. Document viewer:
+##### e. Document viewer:
 ```bash
 apt install -y qpdfview vim scite
 ```
-g. Media support:
+##### f. Media support:
 ```bash
 apt install -y mpv nomacs deluge k3b
 ```
-h. Install file manager:
+##### g. Install file manager:
 ```bash
 apt install -y mc
 ```
-i. Install wine:
+##### h. Install wine:
 ```bash
 sudo dpkg --add-architecture i386 && sudo apt update
 sudo apt install \
@@ -52,12 +50,13 @@ sudo apt install \
       libwine:i386 \
       fonts-wine
 ```
-
-k. Archive support:
+##### k. Archive support:
 ```bash
 apt-get install -y p7zip-full
+wget https://www.rarlab.com/rar/rarlinux-x64-5.7.1.tar.gz
 ```
-l. Create desktop entries:
+Add rar path to PATH in $HOME/bashrc
+##### l. Create desktop entries:
 ```vim
 vi <shortcut>
 
@@ -70,7 +69,7 @@ Exec=pcmanfm -n "/media/tudi/system/01_ToRead/Go_Books (from vault)"
 Name=Go
 GenericName=Go
 ```
-g. Enable numlock after boot. See: https://askubuntu.com/questions/155679/how-to-enable-numlock-at-boot-time-for-login-screen
+##### g. Enable numlock after boot. See: https://askubuntu.com/questions/155679/how-to-enable-numlock-at-boot-time-for-login-screen
 ```bash
 sudo apt install numlockx
 sudo vi /etc/lightdm/lightdm.conf
