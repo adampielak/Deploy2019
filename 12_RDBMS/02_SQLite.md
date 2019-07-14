@@ -10,3 +10,14 @@ package main
         "database/sql"
         _ "github.com/mattn/go-sqlite3"
     )
+  ```  
+#### Create Table
+```sql
+DROP TABLE people;
+ 
+CREATE TABLE people (
+ person_id INTEGER PRIMARY KEY,
+ first_name text NOT NULL,
+ last_name text NOT NULL
+);
+```
