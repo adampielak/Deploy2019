@@ -10,4 +10,3 @@ package main
         "database/sql"
         _ "github.com/mattn/go-sqlite3"
     )
-    ```
