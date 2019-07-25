@@ -8,6 +8,10 @@ As root:
 ```
 ##### Install Proxmox 5.x:
 Requires Debian 9.x.
+```html
+https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_Stretch
+```
+As root:
 ```bash
 echo "deb http://download.proxmox.com/debian/pve stretch pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
 wget http://download.proxmox.com/debian/proxmox-ve-release-5.x.gpg -O /etc/apt/trusted.gpg.d/proxmox-ve-release-5.x.gpg
