@@ -2,6 +2,7 @@
 ### 2. Install Proxmox
 As root:
 ##### Configure network:
+As root in  /etc/hosts:
 ```bash
 # 127.0.1.1     <hostname>
 192.168.1.35    <hostname> pvelocalhost
