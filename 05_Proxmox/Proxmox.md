@@ -2,6 +2,10 @@
 ```html
 https://www.proxmox.com/en/downloads?task=callelement&format=raw&item_id=452&element=f85c494b-2b32-4109-b8c1-083cca2b7db6&method=download&args[0]=7b03f3ce48b75b7b5c4bbc322dfdb990
 ```
+Connect to:
+```html
+https://192.168.1.6:8006/#v1:0:18:4::::::
+```
 2. Get container images with
 ```bash
 pveam available
