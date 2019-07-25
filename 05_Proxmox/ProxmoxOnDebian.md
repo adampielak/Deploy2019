@@ -6,11 +6,11 @@ As root:
 # 127.0.1.1     <hostname>
 192.168.1.35    <hostname> pvelocalhost
 ```
-##### Install Proxmox:
+##### Install Proxmox 5.x:
 ```bash
 echo "deb http://download.proxmox.com/debian/pve stretch pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
-wget http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg -O /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg
-chmod +r /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg
+wget http://download.proxmox.com/debian/proxmox-ve-release-5.x.gpg -O /etc/apt/trusted.gpg.d/proxmox-ve-release-5.x.gpg
+chmod +r /etc/apt/trusted.gpg.d/proxmox-ve-release-5.x.gpg
 apt update && apt dist-upgrade
 apt install proxmox-ve postfix open-iscsi # skip postfix, open-iscsi if not needed
 apt remove os-prober
@@ -24,6 +24,10 @@ init 6
 Connect
 ```html
 https://192.168.1.35:8006/#v1:0:=node%2Fq190:4:=jsconsole:::::
+```
+##### Upgrade from 5 to 6
+```html
+https://pve.proxmox.com/wiki/Upgrade_from_5.x_to_6.0
 ```
 ##### Create bridge for containers
 1. Create bridge in Proxmox in node / Network / Create / Use Router IP as Gateway
