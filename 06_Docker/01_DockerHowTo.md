@@ -82,12 +82,16 @@ docker inspect <container ID> | grep IPAddress
 ```bash
 docker rm <container ID>  # -f (force) if container is active
 ```
-### 9. Attach to container. 
+##### List containers
+```bash
+docker ps -a
+```
+### 10. Attach to container. 
 Detach with ctrl + D - container will stop at detach:
 ```bash
 docker attach <container ID>
 ```
-### 10. Delete all containers:
+### 11. Delete all containers:
 ```bash
 docker rm -f `docker ps --no-trunc -aq`
 ```
