@@ -6,3 +6,7 @@ https://www.youtube.com/watch?v=sMSvjz-hyiA
 ```html
 https://towardsdatascience.com/key-kubernetes-commands-741fe61fde8
 ```
+### Resources
+```html
+http://containertutorials.com/index.html
+```
