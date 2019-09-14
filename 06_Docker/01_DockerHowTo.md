@@ -14,6 +14,12 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
     "storage-driver": "overlay2"
 }
 ```
+reload cnfiguration:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+systemctl show --property=Environment docker
+```
 ##### 2. Download Docker
 ```bash
 wget https://download.docker.com/linux/static/stable/x86_64/docker-18.09.4.tgz
