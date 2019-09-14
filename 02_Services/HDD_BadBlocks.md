@@ -1,15 +1,21 @@
-1. install HDD smart tools:
-sudo apt-get install smartmontools 
-
+##### Install HDD smart tools:
+```bash
+sudo apt install smartmontools 
+```
 install gsmartcontrol
 sudo apt install gsmartcontrol
 
-2. list drives:
+##### List drives:
+```bash
 sudo fdisk -l
+```
+##### List status:
+```bash
+sudo smartctl -i /dev/sdx
+```
 
-3. list status:
-sudo smartctl -i /dev/xxx
-
-4. wipe disk, blocks of 1M. this should allow disk to remap bad sectors if reserve sectors still are:
-sudo dd if=/dev/zero of=/dev/xxx bs=1M
-(should take about 2 hours)
+##### Wipe disk,
+In blocks of 1M, this should allow disk to remap bad sectors if reserve sectors still are:
+```bash
+sudo dd if=/dev/zero of=/dev/xxx bs=1M # should take about 2 hours
+```
