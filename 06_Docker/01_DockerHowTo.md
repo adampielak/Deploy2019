@@ -1,11 +1,13 @@
-Check:
-https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-### 1. Prerequisites
+
+##### 1. Prerequisites
 - 64b os
-- git
-
-### 2. Download Docker
+- git <br />
+Check:
+```html
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+```
+##### 2. Download Docker
 ```bash
 wget https://download.docker.com/linux/static/stable/x86_64/docker-18.09.4.tgz
 ```
@@ -13,29 +15,29 @@ Extract file:
 ```bash
 tar -xzvf <downloaded docker archive>
 ```
-### 4. Copy to bin
+##### 3. Copy to bin
 ```bash
 sudo cp docker/* /usr/bin/
 ```
-### 5. Make current user not use sudo:
+##### 4. Make current user not use sudo
 ```bash
 sudo usermod -aG docker $USER
  ```
 After full logout change will take place.
-### 5. Start Docker daemon
+##### 5. Start Docker daemon
 ```bash
 # check first
 systemctl show --property ActiveState docker
 sudo dockerd &
 ```
-### 6. Create docker file
+##### 6. Create docker file
 ```bash
 vi basex.dok
 # ex.
 # Dockerfile
 # FROM basex/basexhttp:9.1
 ```
-### 7. Create docker image based on a docker file
+##### 7. Create docker image based on a docker file
 ```bash
 sudo docker build - < Dockerfile
 ```
@@ -50,8 +52,8 @@ docker images -q |xargs docker rmi -f
 # or
 docker rmi <img ID>
 ```
-### 8. Create container based on created image
-#### Create network using macvlan driver to connect from other host
+##### 8. Create container based on created image
+###### Create network using macvlan driver to connect from other host
 ```bash
 docker network create -d macvlan --subnet=192.168.1.0/24 --ip-range=192.168.1.128/25 --gateway=192.168.1.127 -o parent=enp4s0 macnet
 # list networks
@@ -66,24 +68,24 @@ sudo docker run -d -p 5432:5432 --name container_name --network <network name> -
 # check
 sudo docker ps -a
 ```
-### 9. Container Operations
-##### Start container
+##### 9. Container Operations
+###### Start container
 ```bash
 docker start <container ID>
 ```
-##### Stop container
+###### Stop container
 ```bash
 docker stop <container ID>
 ```
-##### Get container IP
+###### Get container IP
 ```bash
 docker inspect <container ID> | grep IPAddress
 ```
-##### Remove container
+###### Remove container
 ```bash
 docker rm <container ID>  # -f (force) if container is active
 ```
-##### List containers
+###### List containers
 ```bash
 docker ps -a
 ```
@@ -92,7 +94,7 @@ Detach with ctrl + D - container will stop at detach:
 ```bash
 docker attach <container ID>
 ```
-### 11. Delete all containers:
+##### 11. Delete all containers:
 ```bash
 docker rm -f `docker ps --no-trunc -aq`
 ```
