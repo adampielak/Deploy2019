@@ -9,7 +9,7 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ```bash
 wget https://download.docker.com/linux/static/stable/x86_64/docker-18.09.4.tgz
 ```
-### 3. Extract file
+Extract file:
 ```bash
 tar -xzvf <downloaded docker archive>
 ```
@@ -17,10 +17,11 @@ tar -xzvf <downloaded docker archive>
 ```bash
 sudo cp docker/* /usr/bin/
 ```
-Make current user not use sudo:
+### 5. Make current user not use sudo:
 ```bash
 sudo usermod -aG docker $USER
  ```
+After full logout change will take place.
 ### 5. Start Docker daemon
 ```bash
 # check first
