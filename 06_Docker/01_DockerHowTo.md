@@ -7,6 +7,13 @@
 ```html
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ```
+- set docker data location by editing /etc/docker/daemon.json
+```json
+{
+    "data-root": "/mnt/docker-data",
+    "storage-driver": "overlay2"
+}
+```
 ##### 2. Download Docker
 ```bash
 wget https://download.docker.com/linux/static/stable/x86_64/docker-18.09.4.tgz
