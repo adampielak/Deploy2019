@@ -3,7 +3,7 @@
 ##### 1. Prerequisites
 - 64b os
 - git <br />
-Check:
+- check:
 ```html
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ```
@@ -89,7 +89,7 @@ docker rm <container ID>  # -f (force) if container is active
 ```bash
 docker ps -a
 ```
-### 10. Attach to container. 
+##### 10. Attach to container. 
 Detach with ctrl + D - container will stop at detach:
 ```bash
 docker attach <container ID>
