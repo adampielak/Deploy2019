@@ -22,7 +22,12 @@ cd /var/lib/vz/template/iso  # see https://pve.proxmox.com/wiki/Storage:_Directo
 ```
 4. Transfer image
 ```bash
-scp debian-9.8.0-amd64-xfce-CD-1.iso root@192.168.1.100:/var/lib/vz/template/iso
+# on remote
+sudo chmod 777 /var/lib/vz/template/iso
+```
+```bash
+# on host with image
+scp debian-9.8.0-amd64-xfce-CD-1.iso nonrootUser@192.168.1.100:/var/lib/vz/template/iso
 ```
 5. Configure timezone
 ```bash
