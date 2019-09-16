@@ -130,6 +130,17 @@ ports, or the -P flag to publish all exposed ports and map them to high-order po
 
 https://docs.docker.com/engine/examples/running_ssh_service/
 
+##### Troubleshoot
+Masked docker service:
+a. unmask 
+```bash
+systemctl unmask docker.service
+systemctl unmask docker.socket
+systemctl start docker.service
+# now the service should appear enabled
+systemctl list-unit-files | grep docker
+```
+
 ##### Rancher and K8
 ```html
 https://www.youtube.com/watch?v=sMSvjz-hyiA
