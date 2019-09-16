@@ -2,6 +2,10 @@
 ```bash
 sudo apt-get install sqlite3 libsqlite3-dev
 ```
+#### Browser
+```html
+http://sqlitebrowser.org
+```
 #### Use (Go)
 ```go
 package main
