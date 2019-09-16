@@ -35,9 +35,17 @@ apt install -y qpdfview vim scite
 ```bash
 apt install -y mpv nomacs deluge k3b
 ```
+Sound converter
+```html
+https://soundconverter.org/
+```
 ##### g. Install file manager:
 ```bash
 apt install -y mc
+```
+Or krusader (with KRename)
+```html
+https://krusader.org/
 ```
 ##### h. Install wine:
 ```bash
