@@ -39,6 +39,10 @@ Sound converter
 ```html
 https://soundconverter.org/
 ```
+Torrent client:
+```html
+qbittorrent.org
+```
 ##### g. Install file manager:
 ```bash
 apt install -y mc
