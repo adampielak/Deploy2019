@@ -73,9 +73,11 @@ docker network ls
 docker network inspect <network name>
 ```
 ```bash
-sudo docker run -d -p 5432:5432 --name container_name -ti {image ID}
+sudo docker run -d -p 5432:5432 --name container_name -it {image ID}
+# -i , interactive mode
+# -t , alocate pseudo TTY
 # or
-sudo docker run -d -p 5432:5432 --name container_name --network <network name> -ti {image ID}
+sudo docker run -d -p 5432:5432 --name container_name --network <network name> -it {image ID}
 # check
 sudo docker ps -a
 ```
