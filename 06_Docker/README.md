@@ -32,7 +32,7 @@ sudo cp docker/* /usr/bin/
 ```
 ##### 4. Make current user not use sudo
 ```bash
-sudo usermod -aG docker $USER
+sudo usermod -aG docker $USER  # $USER is environment variable holding current user
  ```
 After full logout change will take place.
 ##### 5. Start Docker daemon
