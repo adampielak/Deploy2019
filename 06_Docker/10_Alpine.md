@@ -11,7 +11,7 @@ service docker start      # start docker service
 docker pull alpine
 docker run -it --rm alpine # /bin/ash, defaults to sh
 # -i , interactive mode
-# -t , alocte pseudo TTY
+# -t , alocate pseudo TTY
 # --rm , remove container after stop
 ```
 ##### Detaching from container 
