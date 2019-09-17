@@ -160,7 +160,10 @@ https://wiki.x2go.org/doku.php/doc:installation:x2goclient
 ```bash
 sudo apt-get install gpick
 ```
-#### 17. QPDF for PDF documents.
+#### 17. QPDF for PDF documents
+```html
+https://launchpad.net/qpdfview
+```
 #### 18. Screen capture:
 http://shutter-project.org/downloads/
 ```bash
@@ -172,8 +175,8 @@ remove:
 sudo rm /etc/apt/sources.list.d/ppa_shutter_ppa_tara.list
 ```
 #### 19. Photo Viewer
-```bash
-sudo apt-get install gthumb
+```html
+https://nomacs.org
 ```
 #### 20. VirtualBox
 ```bash
