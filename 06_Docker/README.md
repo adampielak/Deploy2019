@@ -1,6 +1,7 @@
+### Debian 10 Installation
 ##### 1. Prerequisites
 - 64b os
-- git <br />
+- RAM disk
 - check:
 ```html
 https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/
@@ -19,37 +20,44 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 systemctl show --property=Environment docker
 ```
-##### 2. Download Docker
+##### 2. Install dependencies
 ```bash
-wget https://download.docker.com/linux/static/stable/x86_64/docker-18.09.4.tgz
+sudo apt update
+sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 ```
-Extract file:
+##### 3. Add GPG key
 ```bash
-tar -xzvf <downloaded docker archive>
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 ```
-##### 3. Copy to bin
+##### 4. Add Docker repo
 ```bash
-sudo cp docker/* /usr/bin/
+sudo vi /etc/apt/sources.list
+# add at end of file: deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+sudo apt update
 ```
-##### 4. Make current user not use sudo
+##### 5. Install Docker
+```bash
+sudo apt -y install docker-ce
+```
+##### 6. Make current user not use sudo
+Change will take place after full logout / log off.
 ```bash
 sudo usermod -aG docker $USER  # $USER is environment variable holding current user
  ```
-After full logout change will take place.
-##### 5. Start Docker daemon
+##### 7. Start Docker daemon
 ```bash
 # check first
 systemctl show --property ActiveState docker
 sudo dockerd &
 ```
-##### 6. Create docker file
+##### 8. Create docker file
 ```bash
 vi basex.dok
 # ex.
 # Dockerfile
 # FROM basex/basexhttp:9.1
 ```
-##### 7. Create docker image based on a docker file
+##### 9. Create docker image based on a docker file
 ```bash
 sudo docker build - < Dockerfile
 ```
@@ -64,7 +72,7 @@ docker images -q |xargs docker rmi -f
 # or
 docker rmi <img ID>
 ```
-##### 8. Create container based on created image
+##### 10. Create container based on created image
 ###### Create network using macvlan driver to connect from other host
 ```bash
 docker network create -d macvlan --subnet=192.168.1.0/24 --ip-range=192.168.1.128/25 --gateway=192.168.1.127 -o parent=enp4s0 macnet
@@ -82,7 +90,7 @@ sudo docker run -d -p 5432:5432 --name container_name --network <network name> -
 # check
 sudo docker ps -a
 ```
-##### 9. Container Operations
+##### 11. Container Operations
 ###### Start container
 ```bash
 docker start <container ID>
@@ -103,12 +111,12 @@ docker rm <container ID>  # -f (force) if container is active
 ```bash
 docker ps -a
 ```
-##### 10. Attach to container. 
+##### 12. Attach to container. 
 Detach with ctrl + D - container will stop at detach:
 ```bash
 docker attach <container ID>
 ```
-##### 11. Delete all containers:
+##### 13. Delete all containers:
 ```bash
 docker rm -f `docker ps --no-trunc -aq`
 ```
