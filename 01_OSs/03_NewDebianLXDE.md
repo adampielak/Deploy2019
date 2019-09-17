@@ -23,9 +23,11 @@ The start-up script is ~/.bashrc, not ~/.bash_profile or ~/.profile.
 
 ##### d. Browser install:
 ```bash
-apt install slimjet # or download and gdebi slimjet_amd64.deb
 # Firefox install:
-apt-get install iceweasel
+apt-get install firefox-esr
+# Download Slimjet and install as non root
+vi /etc/sudoers
+sudo gdebi slimjet_amd64.deb
 ```
 ##### e. Document viewer:
 ```bash
