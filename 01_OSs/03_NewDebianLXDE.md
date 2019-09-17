@@ -33,7 +33,7 @@ apt install -y qpdfview vim scite
 ```
 ##### f. Media support:
 ```bash
-apt install -y mpv nomacs deluge k3b
+apt install -y mpv nomacs deluge qbittorrent xfburn soundconverter
 ```
 Sound converter
 ```html
