@@ -1,14 +1,13 @@
-1. GIT install
+#### GIT install
 ```bash
 sudo apt-get install git
 ```
-
 In order to be able to use go get -v with private repos:
 ```bash
 git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 ```
-
-2. GOLANG download from https://golang.org/dl/
+#### GOLANG download 
+From https://golang.org/dl/ .
 ```bash
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
@@ -19,7 +18,6 @@ Create folders for installation:
 ```bash
 mkdir -p $HOME/go/bin $HOME/go/pkg $HOME/go/src 
 ```
-
 Add environment variables for LXTerminal:
 ```bash
 vi $HOME/.bashrc
@@ -50,7 +48,8 @@ Verify:
 ```bash
 mount |grep /tmp
 ```
-Upgrade GO version. Remove previous version first:
+#### Upgrade GO version
+Remove previous version first:
 ```bash
 sudo rm -r /usr/local/go/
 ```
@@ -58,8 +57,8 @@ Download and unzip new version:
 ```bash
 sudo tar -C /usr/local -xzf <new version>
 ```
-
-3. LiteIDE download from https://github.com/visualfc/liteide/releases
+#### LiteIDE download
+From https://github.com/visualfc/liteide/releases .
 ```html
 https://github.com/visualfc/liteide/releases/download/x36/liteidex36.linux64-qt5.5.1.AppImage
 ```
