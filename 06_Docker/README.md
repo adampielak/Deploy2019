@@ -3,7 +3,7 @@
 - git <br />
 - check:
 ```html
-https://linuxize.com/post/how-to-install-and-use-docker-on-debian-10/
+https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ```
 - set docker data location by editing /etc/docker/daemon.json
