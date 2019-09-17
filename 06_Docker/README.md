@@ -10,7 +10,7 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 - set docker data location by editing /etc/docker/daemon.json
 ```json
 {
-    "data-root": "/mnt/docker-data",
+    "data-root": "/mnt/tmpfs.ramdisk/docker-data",
     "storage-driver": "overlay2"
 }
 ```
