@@ -8,7 +8,7 @@ apt install lxde-core
 ```
 ##### c. Apps optimization:
 ```bash
-apt install -y lxterminal gdebi
+apt install -y lxterminal gdebi galculator sudo vim
 apt autoremove -y termit lxtask nano xscreensaver
 # or
 apt purge xscreensaver lxlock
@@ -31,7 +31,7 @@ sudo gdebi slimjet_amd64.deb
 ```
 ##### e. Document viewer:
 ```bash
-apt install -y qpdfview vim scite
+apt install -y qpdfview scite
 ```
 ##### f. Media support:
 ```bash
