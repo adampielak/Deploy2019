@@ -1,10 +1,3 @@
-USB maker:
-https://www.balena.io/etcher/
-download and run the AppImage with sudo.
-```bash
-sudo gparted  //delete any partitions on stick
-```
-
 #### 1. TeamViewer
 ```html
 https://www.teamviewer.com/en/download/linux/
