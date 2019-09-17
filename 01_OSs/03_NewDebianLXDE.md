@@ -8,7 +8,7 @@ apt install lxde-core
 ```
 ##### c. Apps optimization:
 ```bash
-apt install -y lxterminal gdebi galculator sudo vim
+apt install -y lxterminal gdebi galculator sudo vim xfburn soundconverter mc p7zip-full qpdfview
 apt autoremove -y termit lxtask nano xscreensaver
 # or
 apt purge xscreensaver lxlock
