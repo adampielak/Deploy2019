@@ -111,9 +111,10 @@ body {
 
 First time to trigger the compilation update the scss file. This should trigger the transpiler.
 
-#### 9.Disk burner:
-K3b - Disk Burning
-
+#### 9.Disk burner XFBurn:
+```html
+http://www.xfce.org/projects/xfburn
+```
 #### 10.wine:
 ```bash
 sudo apt update
