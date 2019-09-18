@@ -115,6 +115,10 @@ docker ps -a
 ```bash
 docker exec -it <container name> <command, ex. bash>
 ```
+###### Get container IP
+```bash
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'  container_name_or_id
+```
 ##### 12. Attach to container. 
 Detach with ctrl + D - container will stop at detach:
 ```bash
