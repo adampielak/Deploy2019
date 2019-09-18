@@ -111,6 +111,10 @@ docker rm <container ID>  # -f (force) if container is active
 ```bash
 docker ps -a
 ```
+###### Execute command container
+```bash
+docker exec -it <container name> <command, ex. bash>
+```
 ##### 12. Attach to container. 
 Detach with ctrl + D - container will stop at detach:
 ```bash
