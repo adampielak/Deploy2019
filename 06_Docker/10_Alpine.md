@@ -21,7 +21,7 @@ Ctrl-P Ctrl-Q
 ```bash
 # pulls image, creates container
 docker run --name P1 -d -p 5432:5432 -e POSTGRES_PASSWORD=pp postgres:alpine
-docker exec <container ID> cat /etc/os-release  # ets OS version as Alpine
+docker exec <container ID> cat /etc/os-release  # gets OS version as Alpine
 psql -h localhost -p 5432 -U postgres  # connects to DB
 ```
 
