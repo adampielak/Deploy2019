@@ -19,8 +19,8 @@ sudo apt-get install google-chrome-stable
 
 ### 3. Brackets
 ```bash
-wget https://github.com/adobe/brackets/releases/download/release-1.13/Brackets.Release.1.13.64-bit.deb
-gdebi Brackets.Release.1.13.64-bit.deb
+wget https://github.com/adobe/brackets/releases/download/release-1.14/Brackets.Release.1.14.64-bit.deb
+gdebi Brackets.Release.1.14.64-bit.deb
 ```
 Enable Experimental Live Preview if simple Live Preview does not work.
 #### Plugins:
