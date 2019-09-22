@@ -19,6 +19,7 @@ sudo apt-get install google-chrome-stable
 
 ### 3. Brackets
 ```bash
+# does not work on Debian 10 due to missing libcurl3
 wget https://github.com/adobe/brackets/releases/download/release-1.14/Brackets.Release.1.14.64-bit.deb
 gdebi Brackets.Release.1.14.64-bit.deb
 ```
