@@ -13,7 +13,7 @@ colo industry
 Install plugin manager:
 ```bash
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-mkdir -p .vim/autoload
+mkdir -p ~/.vim/autoload
 mv plug.vim .vim/autoload
 ```
 append to .vimrc:
