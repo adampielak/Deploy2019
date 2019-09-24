@@ -5,32 +5,61 @@
 # file path ~/.config/nvim/init.vim
 ```
 #### Plugin install
+Git needed as dependency.
 ```vim
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim/autoload
 mv plug.vim ~/.config/nvim/autoload
+# in nvim, :PlugInstall and :PlugStatus to install and check on plugins. 
 ```
 #### Sample configuration
 ```bash
-syntax on                                                                                       
-set number relativenumber                                                      
-set cursorline                                                                  
-set colorcolumn=80                                                              
-                                                                                
-set foldlevel=0                                                                 
-set history=500                                                                 
-set title
-
-let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')          
-let g:PLUGIN_HOME = expand(stdpath('config') . '')                         
-                                                                                
-call plug#begin(g:PLUGIN_HOME)                                                  
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }                   
-Plug 'vim-airline/vim-airline'                                                  
-Plug 'sheerun/vim-polyglot'                                                     
-Plug 'sainnhe/vim-color-desert-night'                                           
-call plug#end()                                                                             
-colo desert-night 
+  syntax on                                                                                                    
+  set number relativenumber
+  set cursorline
+  "set colorcolumn=80
+  
+  set foldlevel=0
+  set history=500
+  set title
+  
+  " Shortcuts 
+  nmap <C-n> :NERDTreeToggle<CR>
+  nmap <C-a> :user_emmet_expandabbr_key<CR>
+  
+  let g:user_emmet_expandabbr_key = '<C-a>,'
+  
+  let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
+  let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')
+  
+  call plug#begin(g:PLUGIN_HOME)
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  
+  Plug 'sheerun/vim-polyglot'
+  Plug 'itchyny/vim-highlighturl'
+  Plug 'scrooloose/nerdTree'
+  Plug 'dense-analysis/ale'
+  Plug 'mattn/emmet-vim'
+  
+  Plug 'sainnhe/vim-color-desert-night'
+  call plug#end()
+  
+  " Airline (powerline)
+  "let g:airline_powerline_fonts = 1
+  "let g:airline_theme='violet'
+  
+  " ALE Section
+  " Fix files automatically on save
+  let g:ale_fix_on_save = 1
+  let g:ale_completion_enabled = 1
+  let g:ale_sign_error = '>>'
+  let g:ale_sign_warning = '--'
+  let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'], }
+  let g:ale_sign_column_always = 1
+  
+  colo desert-night
 ```
 #### Resources
 ```bash
