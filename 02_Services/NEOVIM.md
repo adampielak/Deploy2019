@@ -10,23 +10,25 @@ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim/autoload
 mv plug.vim ~/.config/nvim/autoload
 ```
-
 #### Sample configuration
 ```bash
-colo industry                                                                          
-syntax on                                                                       
-set number relativenumber                                                     
+syntax on                                                                                       
+set number relativenumber                                                      
 set cursorline                                                                  
 set colorcolumn=80                                                              
                                                                                 
 set foldlevel=0                                                                 
 set history=500                                                                 
-set title                                                                       
-                                                                                					
+set title
+
 let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')          
-let g:PLUGIN_HOME = expand(stdpath('config') . '')                         
+let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')                         
                                                                                 
-call plug#begin(g:PLUGIN_HOME)                                                                                                                            
-Plug 'vim-airline/vim-airline'                                                                                                                                  
-call plug#end()  
+call plug#begin(g:PLUGIN_HOME)                                                  
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }                   
+Plug 'vim-airline/vim-airline'                                                  
+Plug 'sheerun/vim-polyglot'                                                     
+Plug 'sainnhe/vim-color-desert-night'                                           
+call plug#end()                                                                             
+colo desert-night 
 ```
