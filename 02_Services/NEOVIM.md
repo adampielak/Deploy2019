@@ -32,3 +32,7 @@ Plug 'sainnhe/vim-color-desert-night'
 call plug#end()                                                                             
 colo desert-night 
 ```
+#### Resources
+```bash
+https://devtechnica.com/vim-neovim/best-neovim-plugins-for-software-development-in-2019
+```
