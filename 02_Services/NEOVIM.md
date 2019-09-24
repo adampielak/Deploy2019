@@ -24,7 +24,7 @@ set history=500
 set title                                                                       
                                                                                 					
 let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')          
-let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')                         
+let g:PLUGIN_HOME = expand(stdpath('config') . '')                         
                                                                                 
 call plug#begin(g:PLUGIN_HOME)                                                                                                                            
 Plug 'vim-airline/vim-airline'                                                                                                                                  
