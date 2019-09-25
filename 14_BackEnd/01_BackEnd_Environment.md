@@ -82,3 +82,9 @@ Exec=/home/tudi/liteidex35.3.linux64-qt5.5.1.AppImage
 Name=LiteIDE
 GenericName=IDE
 ```
+#### Godoc
+```bash
+sudo apt-get install golang-go.tools
+godoc -http=:6060
+# Navigate to http://localhost:6060
+```
