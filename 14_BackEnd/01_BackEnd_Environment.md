@@ -9,8 +9,8 @@ git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 #### GOLANG download 
 From https://golang.org/dl/ .
 ```bash
-wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.13.1.linux-amd64.tar.gz
 ```
 (does not work as root, without sudo)
 
