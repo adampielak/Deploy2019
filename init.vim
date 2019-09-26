@@ -13,6 +13,8 @@
   
   call plug#begin(g:PLUGIN_HOME)
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'mattn/emmet-vim'
+  
   Plug 'vim-airline/vim-airline'
   Plug 'prettier/vim-prettier', { 'do': 'npm install' } 
   
@@ -28,4 +30,6 @@
   autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync 
 
   let g:deoplete#enable_at_startup = 1
+  let g:user_emmet_expandabbr_key = '<C-a>,' 
+  
   colo desert-night
