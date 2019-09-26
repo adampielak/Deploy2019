@@ -37,6 +37,13 @@ mv plug.vim ~/.config/nvim/autoload
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   
+  Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+  " when running at every change you may want to disable quickfix
+  let g:prettier#quickfix_enabled = 0
+  
+  let g:prettier#autoformat = 0
+  autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+  
   Plug 'sheerun/vim-polyglot'
   Plug 'itchyny/vim-highlighturl'
   Plug 'scrooloose/nerdTree'
