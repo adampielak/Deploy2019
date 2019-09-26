@@ -13,8 +13,6 @@
   
   call plug#begin(g:PLUGIN_HOME)
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-  
   Plug 'vim-airline/vim-airline'
   Plug 'prettier/vim-prettier', { 'do': 'npm install' } 
   
