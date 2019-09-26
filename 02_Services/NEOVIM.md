@@ -72,4 +72,5 @@ mv plug.vim ~/.config/nvim/autoload
 ```bash
 https://devtechnica.com/vim-neovim/best-neovim-plugins-for-software-development-in-2019
 https://www.gregjs.com/vim/2016/neovim-deoplete-jspc-ultisnips-and-tern-a-config-for-kickass-autocompletion/
+http://learnvimscriptthehardway.stevelosh.com/
 ```
