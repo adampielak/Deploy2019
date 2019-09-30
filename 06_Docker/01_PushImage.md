@@ -1,14 +1,14 @@
-###### Create dockerfile
-###### Login Docker Hub
+#### Create dockerfile
+#### Login Docker Hub
 Docker ID needed. 
 ```bash
 docker login --username=DockerID
 ```
-###### Build Image
+#### Build Image
 ```bash
 docker build -t DockerID/name of repo in DockerHUB:tag in DockerHUB repo .
 ```
-###### Push Image to Docker HUB
+#### Push Image to Docker HUB
 ```bash
 docker push DockerID/name of repo in DockerHUB:tag in DockerHUB repo
 ```
