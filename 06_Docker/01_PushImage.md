@@ -16,3 +16,7 @@ Now image can be retrieved as needed.
 ```bash
 FROM DockerID/name of repo in DockerHUB:tag in DockerHUB
 ```
+#### Resources
+```html
+https://blog.shippable.com/build-a-docker-image-and-push-it-to-docker-hub
+```
