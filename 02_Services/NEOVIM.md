@@ -30,7 +30,11 @@ mv plug.vim ~/.config/nvim/autoload
   let g:user_emmet_expandabbr_key = '<C-a>,'
   
   let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
+  # for peppermint
+  # let g:VIM_PLUG_PATH =  './autoload/plug.vim'  
   let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')
+  # for peppermint
+  # let g:PLUGIN_HOME =  './nvim'  
   
   call plug#begin(g:PLUGIN_HOME)
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
