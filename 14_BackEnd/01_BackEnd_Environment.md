@@ -83,6 +83,7 @@ Name=LiteIDE
 GenericName=IDE
 ```
 #### Godoc
+Be aware below installs older version of go tools.
 ```bash
 sudo apt-get install golang-go.tools
 godoc -http=:6060
