@@ -59,8 +59,8 @@ sudo tar -C /usr/local -xzf <new version>
 ```
 #### LiteIDE download
 From https://github.com/visualfc/liteide/releases .
-```html
-https://github.com/visualfc/liteide/releases/download/x36/liteidex36.linux64-qt5.5.1.AppImage
+```bash
+wget https://github.com/visualfc/liteide/releases/download/x36.1/liteidex36.1.linux64-qt5.5.1.AppImage
 ```
 * version with qt 5.x.y
 * version as AppImage
