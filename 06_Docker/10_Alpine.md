@@ -18,6 +18,11 @@ docker run -it --rm alpine # /bin/ash, defaults to sh
 Ctrl-P Ctrl-Q
 
 ##### Postgres in Alpine container
+Postgres client install
+```bash
+sudo apt install postgresql-client  
+```
+Docker image creation
 ```bash
 # pulls image, creates container
 docker run --name P1 -d -p 5432:5432 -e POSTGRES_PASSWORD=pp postgres:alpine
