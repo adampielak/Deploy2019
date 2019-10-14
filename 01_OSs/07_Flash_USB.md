@@ -20,3 +20,8 @@ sudo dd if=[path_to_iso] of=[path_to_usb]
 # example
 sudo dd if=/home/slick/Downloads/debian-7.4.0-amd64-CD-1.iso of=/dev/sdb
 ```
+
+### Linux Partitioning
+```bash
+sudo mkfs.ntfs /dev/sdc1
+```
