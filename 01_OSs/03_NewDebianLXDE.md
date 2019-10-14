@@ -94,3 +94,7 @@ sudo vi /etc/lightdm/lightdm.conf
 # add line:
 greeter-setup-script=/usr/bin/numlockx on
 ```
+##### n. USB Tethering
+```bash
+apt install network-manager
+```
