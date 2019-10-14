@@ -78,7 +78,7 @@ Version=1.0
 Encoding=UTF-8
 Type=Application
 Icon=/home/tudi/Pictures/Oxygen-Icons.org-Oxygen-Categories-applications-system.ico
-Exec=/home/tudi/liteidex35.3.linux64-qt5.5.1.AppImage
+Exec=/home/tudi/liteidex36.1.linux64-qt5.5.1.AppImage
 Name=LiteIDE
 GenericName=IDE
 ```
