@@ -7,9 +7,9 @@
 #### Plugin install
 Git needed as dependency.
 ```vim
-wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.config/nvim/autoload
-mv plug.vim ~/.config/nvim/autoload
+cd ~/.config/nvim/autoload
+wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # in nvim, :PlugInstall and :PlugStatus to install and check on plugins. 
 ```
 #### Sample configuration
