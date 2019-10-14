@@ -5,7 +5,7 @@
 # file path ~/.config/nvim/init.vim
 ```
 #### Plugin install
-Git needed as dependency.
+**Git** needed as dependency.
 ```vim
 mkdir -p ~/.config/nvim/autoload
 cd ~/.config/nvim/autoload
