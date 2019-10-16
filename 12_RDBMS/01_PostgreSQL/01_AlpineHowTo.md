@@ -26,3 +26,7 @@ Stop service:
 ```bash
 rc-service postgresql stop
 ```
+##### DDL
+```sql
+create table if not exists test(id int, uploadedfile bytea);
+```
