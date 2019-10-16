@@ -6,3 +6,20 @@ apk add postgresql
 # connect
 psql -U postgres
 ```
+
+##### Configuration
+In /etc/postgresql:
+```bash
+# postgresql.conf, add listen_addresses = '*'
+# pg_hba.conf, add host    all             all             192.168.1.0/24          password
+```
+Add service to current rc level:
+```bash
+rc-update add postgresql
+# to verify configurations
+reboot
+```
+Stop service:
+```bash
+rc-service postgresql stop
+```
