@@ -5,6 +5,9 @@ apk add postgresql
 /etc/init.d/postgresql start
 # connect
 psql -U postgres
+# change postgres user password
+alter user postgres with password 'admin';
+\q
 ```
 
 ##### Configuration
