@@ -45,6 +45,25 @@ npm run build
 ```
 ### VS Code
 Install package for Vue and enable formatter on save in File / Preferences / Settings / Formatting.
+#### Disable double quotes error
+In .eslintrc.js, section rules add:
+```bash
+ quotes: 0
+```
+#### Disable comma dangle error
+In .eslintrc.js, section rules add:
+```js
+'comma-dangle': [
+      'error',
+      {
+        arrays: 'never',
+        objects: 'only-multiline',
+        imports: 'never',
+        exports: 'never',
+        functions: 'never'
+      }
+    ]
+```
 
 ### Resources:
 * https://vuejsexamples.com/generate-a-vue-form-with-validation-and-bulma-style-from-json/
