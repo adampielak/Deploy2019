@@ -66,6 +66,9 @@ In .eslintrc.js, section rules add:
 ```
 
 ### Resources:
-* https://vuejsexamples.com/generate-a-vue-form-with-validation-and-bulma-style-from-json/
-* https://scotch.io/tutorials/create-a-single-page-app-with-go-echo-and-vue
-* https://scotch.io/courses/build-an-online-shop-with-vue
+```html
+https://vuejsexamples.com/generate-a-vue-form-with-validation-and-bulma-style-from-json/
+https://scotch.io/tutorials/create-a-single-page-app-with-go-echo-and-vue
+https://scotch.io/courses/build-an-online-shop-with-vue
+https://medium.com/@jcbaey/authentication-in-spa-reactjs-and-vuejs-the-right-way-e4a9ac5cd9a3
+```
