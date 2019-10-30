@@ -2,7 +2,6 @@
 ```bash
 npm install -g @vue/cli
 ```
-
 ### Upgrade vue-cli:
 ```bash
 npm uninstall -g vue-cli
@@ -18,14 +17,12 @@ import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 Vue.component('v-icon', Icon)
 ```
-
 #### In xxx.vue:
 ```js
 
 <template>
 <v-icon name="camera"/>
 ```
-
 #### Create Project:
 ```bash
 vue create project_name
@@ -46,6 +43,8 @@ https://cli.vuejs.org/guide/deployment.html
 ```bash
 npm run build
 ```
+### VS Code
+Install package for Vue and enable formatter on save in File / Preferences / Settings / Formatting.
 
 ### Resources:
 * https://vuejsexamples.com/generate-a-vue-form-with-validation-and-bulma-style-from-json/
