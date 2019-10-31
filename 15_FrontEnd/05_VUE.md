@@ -4,6 +4,8 @@ npm install -g @vue/cli
 ```
 ### Upgrade vue-cli:
 ```bash
+npm i -g vue-cli
+# or
 npm uninstall -g vue-cli
 npm install -g @vue/cli
 ```
