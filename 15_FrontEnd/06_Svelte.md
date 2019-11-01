@@ -11,6 +11,35 @@ npm install
 ```bash
 npm run dev
 ```
+#### Svelte context
+App.svelte
+```svelte
+<script>
+  import { onMount } from "svelte";
+  import { getContext } from "svelte";
+  import C1 from "./C1.svelte";
+
+  onMount(_ => {
+    let x = getContext("K1");
+    console.log("xmount:", x);
+  });
+</script>
+
+<C1 />
+```
+C1.svelte
+```svelte
+<script>
+  import { onMount } from "svelte";
+  import { setContext } from "svelte";
+
+  onMount(() => {
+    setContext("K1", { number: 19 });
+  });
+</script>
+
+<h4>Context not available w/o C1 in DOM.</h4>
+```
 
 
 #### Resources
