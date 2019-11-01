@@ -40,7 +40,37 @@ C1.svelte
 
 <h4>Context not available w/o C1 in DOM.</h4>
 ```
+#### Svelte store
+store.js
+```svelte
+import { writable } from 'svelte/store';
 
+function createQuantity() {
+  const { subscribe, set, update } = writable(100);
+
+  return {
+    subscribe,
+    increment: () => update(n => n + 1)
+  };
+}
+
+export const quantity = createQuantity();
+
+quantity.subscribe(newValue => {
+  console.log('quantity in store:', newValue);
+});
+```
+App.svelte
+```svelte
+<script>
+  import { quantity } from "./stores.js";
+
+  console.log("store:", $quantity);
+</script>
+
+<h4>q = {$quantity}</h4>
+<button on:click={quantity.increment}>+</button>
+```
 
 #### Resources
 ```html
