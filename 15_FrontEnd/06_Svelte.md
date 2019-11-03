@@ -61,7 +61,7 @@ export let products = createProducts();
 App.svelte
 ```svelte
 <script>
-  import { products } from "./products.js";
+  import { products } from "./store.js";
 
   console.log("store:", $products);
 </script>
