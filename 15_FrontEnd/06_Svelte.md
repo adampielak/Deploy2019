@@ -68,6 +68,10 @@ App.svelte
 
 {JSON.stringify($products)}
 ```
+#### Form submit
+```svelte
+
+```
 
 #### Resources
 ```html
