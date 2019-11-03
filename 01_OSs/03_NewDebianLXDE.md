@@ -2,9 +2,12 @@
 ```bash
 vi /etc/apt/sources.list
 ```
-##### b. Install LXDE minimal:
+##### b. Install LXDE :
 ```bash
+# minimal
 apt install lxde-core
+# full
+apt install lxde
 ```
 ##### c. Apps optimization:
 ```bash
