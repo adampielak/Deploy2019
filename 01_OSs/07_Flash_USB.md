@@ -16,7 +16,7 @@ https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.1.0-amd64-ne
 ```bash
 sudo dd if=[path_to_iso] of=[path_to_usb]
 # example
-sudo dd if=/home/slick/Downloads/debian-7.4.0-amd64-CD-1.iso of=/dev/sdb
+sudo dd if=/home/slick/Downloads/debian-10.1.0-amd64-netinst.iso of=/dev/sdb
 ```
 
 ### Linux Partitioning
