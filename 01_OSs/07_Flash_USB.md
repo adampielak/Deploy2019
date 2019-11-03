@@ -12,11 +12,6 @@ sudo ./bootiso <image.iso>
 ```html
 https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.1.0-amd64-netinst.iso
 ```
-```bash
-https://www.balena.io/etcher/
-sudo ./balena AppImage
-```
-
 ### Linux CLI
 ```bash
 sudo dd if=[path_to_iso] of=[path_to_usb]
