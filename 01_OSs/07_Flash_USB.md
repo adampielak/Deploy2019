@@ -9,6 +9,9 @@ sudo ./bootiso <image.iso>
 ```
 
 ### For Linux ISO:
+```html
+https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.1.0-amd64-netinst.iso
+```
 ```bash
 https://www.balena.io/etcher/
 sudo ./balena AppImage
