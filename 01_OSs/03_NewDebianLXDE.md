@@ -38,7 +38,7 @@ apt install -y qpdfview scite
 ```
 ##### f. Media support:
 ```bash
-apt install -y mpv nomacs deluge qbittorrent xfburn soundconverter
+apt install -y mpv nomacs qbittorrent xfburn soundconverter
 ```
 Sound converter
 ```html
