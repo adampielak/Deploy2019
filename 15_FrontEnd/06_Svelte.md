@@ -82,4 +82,5 @@ http://www.sveltestatus.com/issues/the-svelte-handbook-a-common-log-in-form-in-s
 https://objectcomputing.com/resources/publications/sett/july-2019-web-dev-simplified-with-svelte
 https://www.alvareznavarro.es/blog/2019/6/svelete-firebase-user-authentication
 https://mauricius.dev/building-a-pagination-component-in-svelte/?utm_campaign=Svelte%20Status&utm_medium=email&utm_source=Revue%20newsletter
+https://www.valentinog.com/blog/svelte/
 ```
