@@ -14,10 +14,7 @@ sudo tar -C /usr/local -xzf go1.13.4.linux-amd64.tar.gz
 ```
 (does not work as root, without sudo)
 
-Create folders for installation:
-```bash
-mkdir -p $HOME/go/bin $HOME/go/pkg $HOME/go/src 
-```
+
 Add environment variables for LXTerminal:
 ```bash
 vi $HOME/.bashrc
@@ -36,6 +33,10 @@ go version
 ```
 (GOROOT - folder where the tar was unzipped ):
 
+Create folders for installation:
+```bash
+mkdir -p $GOPATH/bin $GOPATH/pkg $GOPATH/src 
+```
 For gotest to work enable execution on /tmp:
 ```bash
 sudo vi /etc/fstab
