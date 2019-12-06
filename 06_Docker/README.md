@@ -58,10 +58,10 @@ systemctl show --property ActiveState docker
 sudo dockerd &
 ```
 ##### 8. Create docker file
+The dockerfile name should be Dockerfile.
 ```bash
-vi basex.dok
+vi Dockerfile
 # ex.
-# Dockerfile
 # FROM basex/basexhttp:9.1
 ```
 ##### 9. Create docker image based on a docker file
