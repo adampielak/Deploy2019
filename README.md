@@ -17,3 +17,8 @@ Usage
 ```bash
 cloc-git https://github.com/evalEmpire/perl5i.git
 ```
+SSH Key Generation
+```bash
+ssh-keygen -t rsa -b 4096
+```
+
