@@ -49,6 +49,7 @@ godoc -http=:6060
 ### Resources
 ```html
 https://github.com/golang/go/wiki/Modules
+https://www.youtube.com/watch?v=F8nrpe0XWRg&list=PLq2Nv-Sh8EbbIjQgDzapOFeVfv5bGOoPE&index=3&t=0s
 https://dev.to/maelvls/why-is-go111module-everywhere-and-everything-about-go-modules-24k
 https://dave.cheney.net/2018/07/14/taking-go-modules-for-a-spin
 https://dave.cheney.net/2018/07/16/using-go-modules-with-travis-ci
