@@ -23,3 +23,8 @@ Exec=/home/tudi/liteidex36.2.linux64-qt5.5.1.AppImage
 Name=LiteIDE
 GenericName=IDE
 ```
+### Link to Go binary
+In case Go binary is not found create a soft link to Go binary in the folder where LiteIDE bin is (tested when not using AppImage0:
+```bash
+ln -s $GOROOT/bin/go go
+```
