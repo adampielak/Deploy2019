@@ -1,14 +1,12 @@
 ### Environment variables
-Add environment variables for LXTerminal:
+Add environment variables for default bash shell in:
 ```bash
 vi $HOME/.bashrc
-```
-or other terminals (ex. MX Linux):
-```bash
-vi $HOME/.profile
-...
+# GOPATH on RAM disk
+export GOPATH=$HOME/ram  
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
+# if not working try $HOME/.profile
 ```
 ### GOLANG download 
 From https://golang.org/dl/ .
