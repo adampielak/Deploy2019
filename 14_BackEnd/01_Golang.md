@@ -48,3 +48,7 @@ sudo apt-get install golang-go.tools
 godoc -http=:6060
 # Navigate to http://localhost:6060
 ```
+### Resources
+```html
+https://dev.to/maelvls/why-is-go111module-everywhere-and-everything-about-go-modules-24k
+```
