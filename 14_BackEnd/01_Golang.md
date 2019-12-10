@@ -2,17 +2,15 @@
 Add environment variables for default bash shell in:
 ```bash
 vi $HOME/.bashrc
-# GOPATH on RAM disk
-export GOPATH=$HOME/ram  
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOROOT/bin
+export GO111MODULE=on
+export PATH=$PATH:/usr/local/go/bin
 # if not working try $HOME/.profile
 ```
 ### GOLANG download 
 From https://golang.org/dl/ .
 ```bash
 wget https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
-tar -C $HOME -xzf go1.13.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.13.5.linux-amd64.tar.gz
 ```
 Verify:
 ```bash
