@@ -54,7 +54,7 @@ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   Plug 'dense-analysis/ale'
   Plug 'mattn/emmet-vim'
   
-  Plug 'sainnhe/vim-color-desert-night'
+  Plug 'tomasiser/vim-code-dark'
   call plug#end()
   
   " Airline (powerline)
@@ -70,7 +70,7 @@ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'], }
   let g:ale_sign_column_always = 1
   
-  colo desert-night
+  colorscheme codedark
 ```
 #### Resources
 ```bash
