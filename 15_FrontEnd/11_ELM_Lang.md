@@ -1,3 +1,7 @@
+#### Install ELM with snap approach
+```bash
+npm install --unsafe-perm -g elm
+```
 http://langintro.com/elm-howtos/install_ubuntu/
 
 see script to download in:
