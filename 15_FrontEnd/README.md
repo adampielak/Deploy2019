@@ -39,6 +39,10 @@ verify version:
 node -v
 npm -v
 ```
+c. With snap:
+```bash
+sudo snap install --edge --classic node
+```
 ### 5. SASS Compiler
 ```js
 npm install -g sass
