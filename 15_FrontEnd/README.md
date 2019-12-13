@@ -47,7 +47,7 @@ https://code.visualstudio.com/Download
 ### 6. Node.JS
 a. install nvm (https://github.com/creationix/nvm), check latest version:
 ```bash
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 verify:
 ```bash
