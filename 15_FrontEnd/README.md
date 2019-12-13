@@ -43,6 +43,10 @@ c. With snap:
 ```bash
 sudo snap install --edge --classic node
 ```
+If npm not found, add it to the path:
+```bash
+sudo snap search npm
+```
 ### 5. SASS Compiler
 ```js
 npm install -g sass
