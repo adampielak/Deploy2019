@@ -21,6 +21,7 @@ sudo apt-get install google-chrome-stable
 https://code.visualstudio.com/Download
 ```
 ### 4. Node.JS
+##### A. With package manager
 If issues with permission denied:
 ```html
 https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
@@ -47,7 +48,7 @@ verify version:
 node -v
 npm -v
 ```
-c. With snap:
+##### B. With snap
 ```bash
 sudo snap install --edge --classic node
 ```
