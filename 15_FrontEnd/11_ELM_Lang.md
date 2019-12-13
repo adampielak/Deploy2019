@@ -3,12 +3,14 @@ http://langintro.com/elm-howtos/install_ubuntu/
 see script to download in:
 https://github.com/elm-lang/elm-platform
 
+```bash
 mkdir npm-global
 npm config set prefix /$HOME/npm-global
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 npm i -g elm
 npm i -g elm-platform-bin
+```
 
 1. sudo apt-get install haskell-platform
 2. sudo apt-get install cabal-install
@@ -20,14 +22,15 @@ add to path: $HOME/Elm-Platform/0.18/.cabal-sandbox/bin
 
 
 install elm-format:
-1. wget -qO- https://get.haskellstack.org/ | sh
-2. git clone https://github.com/avh4/elm-format.git
-3. 
+```bash
+wget -qO- https://get.haskellstack.org/ | sh
+git clone https://github.com/avh4/elm-format.git
+
 cd elm-format
 stack setup
 stack build
 stack install
-
+```
 
 tutorials:
 https://jazmit.github.io/2015/06/17/elm-admin-interface.html
