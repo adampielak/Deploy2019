@@ -21,6 +21,14 @@ sudo apt-get install google-chrome-stable
 https://code.visualstudio.com/Download
 ```
 ### 4. Node.JS
+If issues with permission denied:
+```html
+https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+```
+or set in vi ~/.profile:
+```bash
+NPM_CONFIG_PREFIX=~/.npm-global
+```
 a. install nvm (https://github.com/creationix/nvm), check latest version:
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
