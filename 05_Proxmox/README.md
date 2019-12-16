@@ -37,6 +37,10 @@ sudo dpkg-reconfigure tzdata
 ```bash
 vi /etc/apt/sources.list.d/pve-enterprise.list # change to pve-no-subscription
 ```
+Resources:
+```html
+https://thebiglaskowski.com/2019/01/20/proxmox-ve-no-subscription-repository.html
+```
 7. Connect to container, attach to container from Proxmox shell:
 ```bash
 lxc-attach --name <container ID>
