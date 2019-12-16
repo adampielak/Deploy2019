@@ -52,3 +52,4 @@ pct enter <container ID>
 vi /etc/ssh/sshd_config
 service ssh restart
 ```
+9. For VMs use SPICE as video card for better connection from Linux host.
