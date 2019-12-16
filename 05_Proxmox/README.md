@@ -52,4 +52,8 @@ pct enter <container ID>
 vi /etc/ssh/sshd_config
 service ssh restart
 ```
-9. For VMs use SPICE as video card for better connection from Linux host.
+9. For VMs use SPICE as video card for better connection from Linux host. <br />
+For download use:
+```html
+https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso
+```
