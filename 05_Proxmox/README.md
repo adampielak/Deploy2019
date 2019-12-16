@@ -30,6 +30,7 @@ sudo chmod 777 /var/lib/vz/template/iso
 scp debian-9.8.0-amd64-xfce-CD-1.iso nonrootUser@192.168.1.100:/var/lib/vz/template/iso
 ```
 Make sure to use ZFS and not SSD for created containers.
+Add ZFS pool from Datacenter / Storage / Add.
 #### 5. Configure timezone
 ```bash
 sudo dpkg-reconfigure tzdata
