@@ -14,7 +14,7 @@ modprobe -r iwlwifi ; modprobe iwlwifi
 ```bash
 iwconfig  # if Tx-Power > 0 the WiFi card is working
 ```
-#### 3. Install network-manager
+#### 4. Install network-manager
 ```bash
 apt install network-manager
 ```
