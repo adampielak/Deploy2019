@@ -21,5 +21,9 @@ sudo dd if=/home/slick/Downloads/debian-10.1.0-amd64-netinst.iso of=/dev/sdb
 
 ### Linux Partitioning
 ```bash
+fdisk /dev/sdc
+# create new gpt label
+# create new partition <n>
 sudo mkfs.ntfs /dev/sdc1
+sudo mkfs.ext4 /dev/sdc1
 ```
