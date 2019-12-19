@@ -15,6 +15,10 @@ sudo apt-get install build-essential
 sudo apt-get update
 sudo apt-get install git
 ```
+For GIT credential stores check: 
+```html
+https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
+```
 #### 4. Firefox optimization and bookmarks
 SSD optimization:
 about:config
