@@ -10,11 +10,12 @@ Add wireless support:
 apt-get update && apt-get install firmware-iwlwifi
 modprobe -r iwlwifi ; modprobe iwlwifi
 ```
-#### 3. Verify
-```bash
-iwconfig  # if Tx-Power > 0 the WiFi card is working
-```
-#### 4. Install wicd
+#### 3. Install wicd
 ```bash
 apt install wicd
+```
+#### 4. Verify
+Connect with wicd. Verify with:
+```bash
+iwconfig  # if Tx-Power > 0 the WiFi card is working
 ```
