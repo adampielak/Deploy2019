@@ -14,6 +14,8 @@ prerequisites:
 sudo apt-get install build-essential
 sudo apt-get update
 sudo apt-get install git
+# or
+sudo apt install git-all
 ```
 For GIT credential stores check: 
 ```html
