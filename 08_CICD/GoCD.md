@@ -2,7 +2,7 @@
 #### Create container
 #### As root:
 ```bash
-apt install curl gnupg2
+apt install curl gnupg2 git-all
 echo "deb https://download.gocd.org /" | tee /etc/apt/sources.list.d/gocd.list
 curl https://download.gocd.org/GOCD-GPG-KEY.asc | apt-key add -
 apt-get update
