@@ -15,3 +15,8 @@ init 6
 ```html
 http://host:8153/go
 ```
+#### Install gomatic
+```bash
+apt install python3-pip
+pip3 install gomatic
+```
