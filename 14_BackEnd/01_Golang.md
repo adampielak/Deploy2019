@@ -38,6 +38,10 @@ Download and unzip new version:
 tar -C $HOME -xzf <new version>
 ```
 ### Godoc
+See 
+```html
+https://blog.golang.org/godoc-documenting-go-code
+```
 ```bash
 go get golang.org/x/tools/cmd/godoc  
 # installs godoc in $HOME/go/bin, modify PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
