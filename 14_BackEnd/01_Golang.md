@@ -38,11 +38,11 @@ Download and unzip new version:
 tar -C $HOME -xzf <new version>
 ```
 ### Godoc
-Be aware below installs older version of go tools.
 ```bash
-sudo apt-get install golang-go.tools
+go get golang.org/x/tools/cmd/godoc  # installs godoc in $HOME/go/bin, modify PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+# package to browse needs to be in $HOME/go/src/package name
 godoc -http=:6060
-# Navigate to http://localhost:6060
+# Navigate to http://localhost:6060/pkg/package name
 ```
 ### Resources
 ```html
