@@ -39,10 +39,11 @@ tar -C $HOME -xzf <new version>
 ```
 ### Godoc
 ```bash
-go get golang.org/x/tools/cmd/godoc  # installs godoc in $HOME/go/bin, modify PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+go get golang.org/x/tools/cmd/godoc  
+# installs godoc in $HOME/go/bin, modify PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 # package to browse needs to be in $HOME/go/src/package name
 godoc -http=:6060
-# Navigate to http://localhost:6060/pkg/package name
+# Navigate to http://localhost:6060/pkg/package name/?m=all  # will present also data of unexported 
 ```
 ### Resources
 ```html
