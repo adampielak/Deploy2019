@@ -199,6 +199,8 @@ sudo apt-get install libreoffice
 sudo apt-get install libreoffice-writer
 # or
 sudo apt-get install libreoffice-calc
+# or
+sudo apt-get install libreoffice-impress
 ```
 #### 22. Calculator
 ```bash
