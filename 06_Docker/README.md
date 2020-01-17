@@ -22,6 +22,7 @@ sudo systemctl restart docker
 systemctl show --property=Environment docker
 ```
 ##### 2. Install dependencies
+Not necessary on MX Linux.
 ```bash
 sudo apt update
 sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
