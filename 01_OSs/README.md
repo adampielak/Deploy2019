@@ -18,3 +18,8 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 # -w stands for match the whole word,
 # -l (lower-case L) can be added to just give the file name of matching files.
 ```
+#### Get TBWritten
+```bash
+sudo smartctl -A /dev/sdb | awk '/^241/ { print "TBW: "($10 * 512) * 1.0e-12, "TB" } '
+```
+
