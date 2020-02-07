@@ -206,3 +206,7 @@ sudo apt-get install libreoffice-impress
 ```bash
 sudo apt install galculator
 ```
+#### 23. Torrent Client
+```bash
+sudo apt install qbittorrent
+```
