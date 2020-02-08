@@ -37,6 +37,11 @@ sudo vi /etc/apt/sources.list
 # add at end of file: deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 sudo apt update
 ```
+On MX Linux the file to update:
+```bash
+cd /etc/apt/sources.list.d/
+sudo vi mx.list
+```
 ##### 5. Install Docker
 ```bash
 sudo apt -y install docker-ce
