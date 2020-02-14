@@ -210,3 +210,13 @@ sudo apt install galculator
 ```bash
 sudo apt install qbittorrent
 ```
+#### 24. Disable swap
+```bash
+sudo swapoff -a
+```
+Permanent
+```bash
+vi /etc/fstab
+# add /swap.img      none    swap    sw      0       0
+```
+
