@@ -16,7 +16,7 @@ gdebi virtualbox-6.1_6.1.2-135662~Debian~buster_amd64.deb
  ```
  Download
  ```bash
- wget https://github.com/phpvirtualbox/phpvirtualbox/archive/5.2-1.zip
+wget https://github.com/phpvirtualbox/phpvirtualbox/archive/develop.zip
 ```
 Unzip
 ```bash
