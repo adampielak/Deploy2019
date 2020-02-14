@@ -30,3 +30,15 @@ Copy configuration
 ```bash
 cp /var/www/html/phpvirtualbox/config.php-example /var/www/html/phpvirtualbox/config.php
 ```
+Set user owing VB process
+```bash
+vi /var/www/html/phpvirtualbox/config.php
+# edit var $username = 'user';
+# edit var $password = 'pass';
+```
+Create VB file
+```bash
+vi /etc/default/virtualbox
+# add line with previously used user VBOXWEB_USER=user
+```
+Reboot.
