@@ -13,3 +13,8 @@ Beyond Compare
 ```html
 http://www.scootersoftware.com/download.php?zz=kb_linux_install
 ```
+
+Simple Compare
+```bash
+git diff HEAD^ HEAD Makefile
+```
