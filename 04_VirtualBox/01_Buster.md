@@ -18,13 +18,18 @@ wget https://download.virtualbox.org/virtualbox/6.1.2/Oracle_VM_VirtualBox_Exten
 Install.
  ```bash
 VBoxManage extpack install <pack>
- ```
+```
+Install rdesktop on host used for management.
+```bash
+apt install rdesktop
+# to connect: rdesktop -a 16 -N 192.168.1.x:3389
+```
 ### Install phpvirtualbox
  ```bash
- apt install apache2 php php-mysql libapache2-mod-php php-soap php-xml
+apt install apache2 php php-mysql libapache2-mod-php php-soap php-xml
  ```
- Download
- ```bash
+Download
+```bash
 wget https://github.com/phpvirtualbox/phpvirtualbox/archive/develop.zip
 ```
 Unzip
