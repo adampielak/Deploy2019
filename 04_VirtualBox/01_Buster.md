@@ -1,5 +1,5 @@
-### Buster 10.3 -  Virtual Box 6.1
-#### Headless
+## Buster 10.3 -  Virtual Box 6.1
+### Headless Install
 ```bash
 su -
 apt install build-essential dkms unzip wget
@@ -10,16 +10,16 @@ gdebi virtualbox-6.1_6.1.2-135662~Debian~buster_amd64.deb
 ```bash
  systemctl status vboxdrv
  ```
- #### Install Extension Pack
- Extension Pack is needed for Remote Display.
+### Install Extension Pack
+Extension Pack is needed for Remote Display.
+```bash
+wget https://download.virtualbox.org/virtualbox/6.1.2/Oracle_VM_VirtualBox_Extension_Pack-6.1.2.vbox-extpack
+```
+Install.
  ```bash
- wget https://download.virtualbox.org/virtualbox/6.1.2/Oracle_VM_VirtualBox_Extension_Pack-6.1.2.vbox-extpack
+VBoxManage extpack install <pack>
  ```
- Install.
- ```bash
- VBoxManage extpack install <pack>
- ```
- #### Install phpvirtualbox
+### Install phpvirtualbox
  ```bash
  apt install apache2 php php-mysql libapache2-mod-php php-soap php-xml
  ```
@@ -51,5 +51,5 @@ vi /etc/default/virtualbox
 # add line with previously used user VBOXWEB_USER=user
 ```
 Reboot.
-#### Connect
+### Connect
 Login with admin/admin at ip/phpvirtualbox.
