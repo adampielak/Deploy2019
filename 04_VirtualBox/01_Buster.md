@@ -1,4 +1,4 @@
-### Buster 10.3
+### Buster 10.3 -  Virtual Box 6.1
 #### Headless
 ```bash
 su -
@@ -9,6 +9,15 @@ gdebi virtualbox-6.1_6.1.2-135662~Debian~buster_amd64.deb
 #### Check service status
 ```bash
  systemctl status vboxdrv
+ ```
+ #### Install Extension Pack
+ Extension Pack is needed for Remote Display.
+ ```bash
+ wget https://download.virtualbox.org/virtualbox/6.1.2/Oracle_VM_VirtualBox_Extension_Pack-6.1.2.vbox-extpack
+ ```
+ Install.
+ ```bash
+ VBoxManage extpack install <pack>
  ```
  #### Install phpvirtualbox
  ```bash
