@@ -42,3 +42,5 @@ vi /etc/default/virtualbox
 # add line with previously used user VBOXWEB_USER=user
 ```
 Reboot.
+#### Connect
+Login with admin/admin at ip/phpvirtualbox.
