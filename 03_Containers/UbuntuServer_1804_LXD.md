@@ -5,7 +5,8 @@ sudo apt-get install zfsutils-linux
 ```
 ```bash
 sudo zpool list
-sudo zpool create -f -o ashift=12 toshiba /dev/sda /dev/sdb
+sudo zpool create -f -o ashift=12 toshiba /dev/sda /dev/sdb  # raid 0
+sudo zpool create -f d7200 /dev/sdb  # one disk
 ```
 ### 2. Initialize lxd daemon
 ```bash
