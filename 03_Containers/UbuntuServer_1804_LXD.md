@@ -1,4 +1,8 @@
 ### 1. Create ZFS RAID 0 pool
+If zfs not installed:
+```bash
+sudo apt-get install zfsutils-linux
+```
 ```bash
 sudo zpool list
 sudo zpool create -f -o ashift=12 toshiba /dev/sda /dev/sdb
