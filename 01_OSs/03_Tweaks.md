@@ -27,7 +27,7 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 # -w stands for match the whole word,
 # -l (lower-case L) can be added to just give the file name of matching files.
 ```
-## GB Written <a name="x"></a> ([Up](#top))
+## GB Written <a name="written"></a> ([Up](#top))
 ```bash
 sudo smartctl -A /dev/sda | awk '/^241/ { print "GBW: "($10 * 1024) * 1.0e-5, "GB" } '
 ```
