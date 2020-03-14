@@ -4,12 +4,15 @@
 * [SSH](#ssh)
 * [File Management](#file)
 * [Comms](#comms)
+* [Media](#media)
+* [Office](#office)
 
 ## Date and Time <a name="time"></a>
 ### Change timezone:
 ```bash
 sudo timedatectl set-timezone Europe/Bucharest
 ```
+
 ## RAM and Disk <a name="ram"></a>
 ### RAM Disk
 ```bash
@@ -36,6 +39,7 @@ vi /etc/fstab
 ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
+
 ## File Management <a name="file"></a>
 ### Midnight Commander
 ```bash
@@ -57,6 +61,12 @@ http://www.xfce.org/projects/xfburn
 ```html
 https://launchpad.net/qpdfview
 ```
+### wine
+```bash
+sudo apt update
+sudo apt-get install wine wine32 wine-stable
+```
+
 ## Comms <a name="comms"></a>
 ### SlimJet browser
 ```bash
@@ -76,10 +86,67 @@ connecting client:
 ```html
 https://wiki.x2go.org/doku.php/doc:installation:x2goclient
 ```
+### Mikrotik Winbox
+```bash
+wget http://www.mikrotik.com/download/winbox.exe
+wine winbox.exe
+```
+alternative for finding IPs on LAN:
+```bash
+nmap -sP 192.168.1.0-45
+```
 
+## Media <a name="media"></a>
+### VLC
+```html
+https://community.linuxmint.com/software/view/vlc
+```
+*if no image but sound change the video output to X11 <br/>
+mpeg 4 AAC codec for burner: sudo apt-get install gstreamer1.0-libav
+### Color picker 
+```bash
+sudo apt-get install gpick
+```
+### Photo Viewer
+```html
+https://nomacs.org
+```
+### Screen capture
+http://shutter-project.org/downloads/
+```bash
+sudo add-apt-repository ppa:shutter/ppa
+sudo apt-get update && sudo apt-get install shutter
+```
+remove:
+```bash
+sudo rm /etc/apt/sources.list.d/ppa_shutter_ppa_tara.list
+```
 
-#### 3. Git
-prerequisites: 
+## Office <a name="office"></a>
+### Calculator
+```bash
+sudo apt install galculator
+```
+### LibreOffice
+Prerequisites:
+```bash
+sudo apt-get install -y software-properties-common
+```
+```bash
+sudo apt-add-repository ppa:libreoffice/ppa
+sudo apt update
+sudo apt-get install libreoffice
+# or
+sudo apt-get install libreoffice-writer
+# or
+sudo apt-get install libreoffice-calc
+# or
+sudo apt-get install libreoffice-impress
+```
+
+## Development <a name="dev"></a>
+### Git
+Prerequisites: 
 ```bash
 sudo apt-get install build-essential
 sudo apt-get update
@@ -91,17 +158,12 @@ For GIT credential stores check:
 ```html
 https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
 ```
-#### 7.VLC
+### Markdown Editor
 ```html
-https://community.linuxmint.com/software/view/vlc
+http://pad.haroopress.com/
 ```
-*if no image but sound change the video output to X11
-
-mpeg 4 AAC codec for burner: sudo apt-get install gstreamer1.0-libav
-
-#### 8.JavaScript Editor
+### Brackets Editor
 http://brackets.io/
-https://code.visualstudio.com/
 
 Brackets
 for plugins: https://www.webpagefx.com/blog/web-design/brackets-extensions/
@@ -141,7 +203,6 @@ test with:
 </body>
 </html>
 ```
-
 and:
 ```css
 $blue: #4000FF;
@@ -150,53 +211,9 @@ body {
     background-color: $blue;
 }
 ```
-
 First time to trigger the compilation update the scss file. This should trigger the transpiler.
 
-
-#### 10.wine:
-```bash
-sudo apt update
-sudo apt-get install wine wine32 wine-stable
-```
-#### 11.Mikrotik Winbox:
-```bash
-wget http://www.mikrotik.com/download/winbox.exe
-wine winbox.exe
-```
-alternative for finding IPs on LAN:
-```bash
-nmap -sP 192.168.1.0-45
-```
-
-
-
-
-convert to mp3:
-```bash
-ffmpeg -i file.mp4 -b:a 192k file.mp3
-```
-#### 15. 
-#### 16. Color picker:  
-```bash
-sudo apt-get install gpick
-```
-
-#### 18. Screen capture:
-http://shutter-project.org/downloads/
-```bash
-sudo add-apt-repository ppa:shutter/ppa
-sudo apt-get update && sudo apt-get install shutter
-```
-remove:
-```bash
-sudo rm /etc/apt/sources.list.d/ppa_shutter_ppa_tara.list
-```
-#### 19. Photo Viewer
-```html
-https://nomacs.org
-```
-#### 20. VirtualBox
+### VirtualBox
 ```bash
 sudo apt-get install dkms
 wget http://download.virtualbox.org/virtualbox/5.2.14/virtualbox-5.2_5.2.14-123301~Ubuntu~bionic_amd64.deb
@@ -204,30 +221,4 @@ wget http://download.virtualbox.org/virtualbox/5.2.14/virtualbox-5.2_5.2.14-1233
 start headless:
 ```bash
 vboxheadless --startvm <name>
-```
-#### 21. LibreOffice
-Just in case:
-```bash
-sudo apt-get install -y software-properties-common
-```
-```bash
-sudo apt-add-repository ppa:libreoffice/ppa
-sudo apt update
-sudo apt-get install libreoffice
-# or
-sudo apt-get install libreoffice-writer
-# or
-sudo apt-get install libreoffice-calc
-# or
-sudo apt-get install libreoffice-impress
-```
-#### 22. Calculator
-```bash
-sudo apt install galculator
-```
-
-
-#### 25. Markdown Editor
-```html
-http://pad.haroopress.com/
 ```
