@@ -1,15 +1,35 @@
 # Tweaks <a name="top"></a> <a name="top"></a>
 * [OS Version](#vers)
+* [X Type](#x)
+* [Grep](#grep)
+* [GB Written](#written)
 * [MOTD](#motd)
 * [New hard drive](#new)
 * [Format Partition](#format)
 * [Mount Disk](#mount)
 * [No sleep when docked](#dock)
 * [Running Services](#services)
+* [Other Tweaks](#other)
 
 ## OS Version <a name="vers"></a> 
 ```bash
 cat /etc/*-release
+```
+## X Type <a name="x"></a> ([Up](#top))
+```bash
+ls /usr/bin/*session
+```
+## Grep <a name="grep"></a> ([Up](#top))
+```bash
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+# -r or -R is recursive,
+# -n is line number,
+# -w stands for match the whole word,
+# -l (lower-case L) can be added to just give the file name of matching files.
+```
+## GB Written <a name="x"></a> ([Up](#top))
+```bash
+sudo smartctl -A /dev/sda | awk '/^241/ { print "GBW: "($10 * 1024) * 1.0e-5, "GB" } '
 ```
 ## Update MOTD <a name="motd"></a> ([Up](#top))
 ```bash
@@ -54,4 +74,8 @@ sudo service systemd-logind restart
 ```bash
 service --status-all
 systemctl --type=service --state=active list-units
+```
+## Other Tweaks <a name="vers"></a> 
+```html
+https://dev.to/javinpaul/10-simple-linux-tips-which-save-50-of-my-time-in-the-command-line-4moo?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email
 ```
