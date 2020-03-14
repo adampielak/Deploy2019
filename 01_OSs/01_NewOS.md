@@ -1,12 +1,82 @@
-#### 1. TeamViewer
-```html
-https://www.teamviewer.com/en/download/linux/
-```
+# Debian: OS Optimizations
+* [Date and Time](#time)
+* [RAM and Disk](#ram)
+* [SSH](#ssh)
+* [File Management](#file)
+* [Comms](#comms)
 
-#### 2. Change timezone:
+## Date and Time <a name="time"></a>
+### Change timezone:
 ```bash
 sudo timedatectl set-timezone Europe/Bucharest
 ```
+## RAM and Disk <a name="ram"></a>
+### RAM Disk
+```bash
+sudo mkdir /mnt/tmpfs.ramdisk
+sudo vi /etc/fstab
+tmpfs   /mnt/tmpfs.ramdisk  tmpfs  nodev,nosuid,nodiratime,size=100M 0  0
+ln -s /mnt/tmpfs.ramdisk $HOME/ram
+```
+Make terminal shortcut open in RAM disk:
+```bash
+xfce4-terminal --default-working-directory=/home/user/ram
+```
+### Disable swap
+```bash
+sudo swapoff -a
+```
+Permanent
+```bash
+vi /etc/fstab
+# add /swap.img      none    swap    sw      0       0
+```
+## SSH <a name="ssh"></a>
+```bash
+ssh-keygen -t rsa -C "your.email@example.com" -b 4096
+xclip -sel clip < ~/.ssh/id_rsa.pub
+```
+## File Management <a name="file"></a>
+### Midnight Commander
+```bash
+sudo apt install mc
+```
+### 7zip
+```bash
+sudo apt-get install p7zip-full p7zip-rar
+```
+### Torrent Client
+```bash
+sudo apt install qbittorrent
+```
+### Disk burner XFBurn
+```html
+http://www.xfce.org/projects/xfburn
+```
+### QPDF
+```html
+https://launchpad.net/qpdfview
+```
+## Comms <a name="comms"></a>
+### SlimJet browser
+```bash
+sudo apt install slimjet  # may not work
+```
+Set cache for for RAM disk.
+### TeamViewer
+```html
+https://www.teamviewer.com/en/download/linux/
+```
+### Remote Desktop like (under review)
+server:
+```html
+https://wiki.x2go.org/doku.php/doc:installation:x2goserver
+```
+connecting client:
+```html
+https://wiki.x2go.org/doku.php/doc:installation:x2goclient
+```
+
 
 #### 3. Git
 prerequisites: 
@@ -20,33 +90,6 @@ sudo apt install git-all
 For GIT credential stores check: 
 ```html
 https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
-```
-#### 4. Firefox optimization and bookmarks
-SSD optimization:
-about:config
-browser.cache.disk.enable - set to false
-
-browser.sessionstore.interval - set to 3600000. or one hour
-
-create key for memory cache, right click with type integer:
-disk.cache.memory.capacity
-131072 for 128 Mb. value in KB
-
-#### 5. RAM Disk
-```bash
-sudo mkdir /mnt/tmpfs.ramdisk
-sudo vi /etc/fstab
-tmpfs   /mnt/tmpfs.ramdisk  tmpfs  nodev,nosuid,nodiratime,size=100M 0  0
-ln -s /mnt/tmpfs.ramdisk $HOME/ram
-```
-Make terminal shortcut open in RAM disk:
-```bash
-xfce4-terminal --default-working-directory=/home/user/ram
-```
-#### 6. SSH Key
-```bash
-ssh-keygen -t rsa -C "your.email@example.com" -b 4096
-xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 #### 7.VLC
 ```html
@@ -110,10 +153,7 @@ body {
 
 First time to trigger the compilation update the scss file. This should trigger the transpiler.
 
-#### 9.Disk burner XFBurn:
-```html
-http://www.xfce.org/projects/xfburn
-```
+
 #### 10.wine:
 ```bash
 sudo apt update
@@ -128,41 +168,20 @@ alternative for finding IPs on LAN:
 ```bash
 nmap -sP 192.168.1.0-45
 ```
-#### 12. SlimJet browser for default browsing.
-```bash
-sudo apt install slimjet
-```
-Set cache for for RAM disk.
 
-#### 13. Midnight Commander
-```bash
-sudo apt install mc
-```
-#### 14. 7zip
-```bash
-sudo apt-get install p7zip-full p7zip-rar
-```
+
+
+
 convert to mp3:
 ```bash
 ffmpeg -i file.mp4 -b:a 192k file.mp3
 ```
-#### 15. Remote Desktop like:
-server:
-```html
-https://wiki.x2go.org/doku.php/doc:installation:x2goserver
-```
-connecting client:
-```html
-https://wiki.x2go.org/doku.php/doc:installation:x2goclient
-```
+#### 15. 
 #### 16. Color picker:  
 ```bash
 sudo apt-get install gpick
 ```
-#### 17. QPDF for PDF documents
-```html
-https://launchpad.net/qpdfview
-```
+
 #### 18. Screen capture:
 http://shutter-project.org/downloads/
 ```bash
@@ -206,19 +225,8 @@ sudo apt-get install libreoffice-impress
 ```bash
 sudo apt install galculator
 ```
-#### 23. Torrent Client
-```bash
-sudo apt install qbittorrent
-```
-#### 24. Disable swap
-```bash
-sudo swapoff -a
-```
-Permanent
-```bash
-vi /etc/fstab
-# add /swap.img      none    swap    sw      0       0
-```
+
+
 #### 25. Markdown Editor
 ```html
 http://pad.haroopress.com/
