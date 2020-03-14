@@ -1,4 +1,4 @@
-# Debian: OS Optimizations
+# Debian: OS Optimizations <a name="top"></a>
 * [Date and Time](#time)
 * [RAM and Disk](#ram)
 * [SSH](#ssh)
@@ -8,13 +8,13 @@
 * [Office](#office)
 * [Development](#dev)
 
-## Date and Time <a name="time"></a>
+## Date and Time <a name="time"></a> 
 ### Change timezone:
 ```bash
 sudo timedatectl set-timezone Europe/Bucharest
 ```
 
-## RAM and Disk <a name="ram"></a>
+## RAM and Disk <a name="ram"></a> ([Up](#top))
 ### RAM Disk
 ```bash
 sudo mkdir /mnt/tmpfs.ramdisk
@@ -35,13 +35,13 @@ Permanent
 vi /etc/fstab
 # add /swap.img      none    swap    sw      0       0
 ```
-## SSH <a name="ssh"></a>
+## SSH <a name="ssh"></a> ([Up](#top))
 ```bash
 ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
-## File Management <a name="file"></a>
+## File Management <a name="file"></a> ([Up](#top))
 ### Midnight Commander
 ```bash
 sudo apt install mc
@@ -79,7 +79,7 @@ sudo apt install \
       fonts-wine
 ```
 
-## Comms <a name="comms"></a>
+## Comms <a name="comms"></a> ([Up](#top))
 ### USB Tethering
 ```bash
 apt install network-manager
@@ -117,7 +117,7 @@ alternative for finding IPs on LAN:
 nmap -sP 192.168.1.0-45
 ```
 
-## Media <a name="media"></a>
+## Media <a name="media"></a> ([Up](#top))
 ### VLC
 ```html
 https://community.linuxmint.com/software/view/vlc
@@ -147,7 +147,7 @@ sudo rm /etc/apt/sources.list.d/ppa_shutter_ppa_tara.list
 https://soundconverter.org/
 ```
 
-## Office <a name="office"></a>
+## Office <a name="office"></a> ([Up](#top))
 ### Calculator
 ```bash
 sudo apt install galculator
@@ -169,7 +169,7 @@ sudo apt-get install libreoffice-calc
 sudo apt-get install libreoffice-impress
 ```
 
-## Development <a name="dev"></a>
+## Development <a name="dev"></a> ([Up](#top))
 ### Git
 Prerequisites: 
 ```bash
