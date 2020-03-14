@@ -3,6 +3,7 @@
 * [X Type](#x)
 * [Grep](#grep)
 * [GB Written](#written)
+* [LOC](#loc)
 * [MOTD](#motd)
 * [New hard drive](#new)
 * [Format Partition](#format)
@@ -30,6 +31,22 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 ## GB Written <a name="written"></a> ([Up](#top))
 ```bash
 sudo smartctl -A /dev/sda | awk '/^241/ { print "GBW: "($10 * 1024) * 1.0e-5, "GB" } '
+```
+## Lines of Code <a name="loc"></a> ([Up](#top))
+```bash
+sudo apt install cloc
+```
+Make script cloc-git and place in path, chmod +x:
+```bash
+#!/usr/bin/env bash
+git clone --depth 1 "$1" temp-linecount-repo &&
+  printf "('temp-linecount-repo' will be deleted automatically)\n\n\n" &&
+  cloc temp-linecount-repo &&
+  rm -rf temp-linecount-repo
+```
+Usage
+```bash
+cloc-git https://github.com/evalEmpire/perl5i.git
 ```
 ## Update MOTD <a name="motd"></a> ([Up](#top))
 ```bash
