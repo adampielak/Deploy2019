@@ -50,6 +50,11 @@ sudo apt install mc
 ```bash
 sudo apt-get install p7zip-full p7zip-rar
 ```
+### RAR
+```bash
+wget https://www.rarlab.com/rar/rarlinux-x64-5.7.1.tar.gz
+```
+Add rar path to PATH in $HOME/bashrc.
 ### Torrent Client
 ```bash
 sudo apt install qbittorrent
@@ -148,6 +153,17 @@ https://soundconverter.org/
 ```
 
 ## Office <a name="office"></a> ([Up](#top))
+### Enable numlock after boot 
+See:
+```html
+https://askubuntu.com/questions/155679/how-to-enable-numlock-at-boot-time-for-login-screen
+```
+```bash
+sudo apt install numlockx
+sudo vi /etc/lightdm/lightdm.conf
+# add line:
+greeter-setup-script=/usr/bin/numlockx on
+```
 ### Calculator
 ```bash
 sudo apt install galculator
