@@ -8,8 +8,7 @@
 
 ### Download <a name="download"></a>
 ```bash
-wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-xfce-CD-1.iso
-sudo vi /etc/apt/sources.list
+wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.3.0-amd64-netinst.iso
 ```
 Mandatory set mirror - mirror would enable all options for install. Check only system utilities and ssh server.
 
