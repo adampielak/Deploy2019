@@ -164,6 +164,13 @@ sudo vi /etc/lightdm/lightdm.conf
 # add line:
 greeter-setup-script=/usr/bin/numlockx on
 ```
+### Keyboard shortcuts
+```bash
+vi ~/.bash_aliases
+# add:
+alias r2='rm -rf *'
+```
+Load new entries with bash or open new terminal window.
 ### Calculator
 ```bash
 sudo apt install galculator
