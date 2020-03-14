@@ -67,13 +67,33 @@ https://launchpad.net/qpdfview
 sudo apt update
 sudo apt-get install wine wine32 wine-stable
 ```
+or
+```bash
+sudo dpkg --add-architecture i386 && sudo apt update
+sudo apt install \
+      wine \
+      wine32 \
+      wine64 \
+      libwine \
+      libwine:i386 \
+      fonts-wine
+```
 
 ## Comms <a name="comms"></a>
+### USB Tethering
+```bash
+apt install network-manager
+```
 ### SlimJet browser
 ```bash
-sudo apt install slimjet  # may not work
+sudo apt install slimjet  # if not work download and install as non root
+sudo gdebi slimjet_amd64.deb
 ```
 Set cache for for RAM disk.
+### Firefox ESR
+```bash
+apt-get install firefox-esr
+```
 ### TeamViewer
 ```html
 https://www.teamviewer.com/en/download/linux/
@@ -121,6 +141,10 @@ sudo apt-get update && sudo apt-get install shutter
 remove:
 ```bash
 sudo rm /etc/apt/sources.list.d/ppa_shutter_ppa_tara.list
+```
+### Sound converter
+```html
+https://soundconverter.org/
 ```
 
 ## Office <a name="office"></a>
@@ -213,6 +237,9 @@ body {
 }
 ```
 First time to trigger the compilation update the scss file. This should trigger the transpiler.
+
+### Geany IDE
+For fast file viewing.
 
 ### VirtualBox
 ```bash
