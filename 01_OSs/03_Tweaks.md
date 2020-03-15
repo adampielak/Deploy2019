@@ -6,7 +6,7 @@
 * [LOC](#loc)
 * [MOTD](#motd)
 * [New hard drive](#new)
-* [Format Partition](#format)
+* [Partitioning](#format)
 * [Mount Disk](#mount)
 * [No sleep when docked](#dock)
 * [Running Services](#services)
@@ -62,7 +62,14 @@ sudo parted /dev/sdx mklabel gpt  # create partition table on drive
 sudo parted -a opt /dev/sdx mkpart primary ext4 0% 100%  # create partition
 lsblk       # check partition
 ```
-## Format partition <a name="format"></a> ([Up](#top))
+## Partitioning <a name="format"></a> ([Up](#top))
+### Create Partition
+```bash
+fdisk /dev/sdc
+# create new gpt label
+# create new partition <n>
+```
+### Format Partition
 ```bash
 sudo mkfs.ext4 -L datapartitionlabel /dev/sdX1
 ```
