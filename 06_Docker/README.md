@@ -1,13 +1,39 @@
-### Debian 10 Installation
-##### 1. Prerequisites
-- 64b os
-- RAM disk
-- check:
+# Docker: Debian 10 Installation
+* [Prerequisites](#prere) <a name="top"></a>
+* [Install - GPG Key](#key) <a name="top"></a>
+* [Install - Docker Repo](#repo) <a name="top"></a>
+
+## Prerequisites <a name="prere"></a> 
+* 64b OS
+* RAM disk (lower SSD wear)
+* Dependencies install. Not necessary on MX Linux.
+```bash
+sudo apt update
+sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+```
+* Resources:
 ```html
 https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 https://flaviocopes.com/golang-docker/
 ```
+
+## Install - Add GPG Key <a name="key"></a> ([Up](#top))
+```bash
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+```
+## Install - Add Docker Repo <a name="repo"></a> ([Up](#top))
+```bash
+sudo vi /etc/apt/sources.list
+# add at end of file: deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+sudo apt update
+```
+On MX Linux the file to update:
+```bash
+cd /etc/apt/sources.list.d/
+sudo vi mx.list
+```
+
 - set docker data location by editing /etc/docker/daemon.json
 ```json
 {
@@ -21,27 +47,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 systemctl show --property=Environment docker
 ```
-##### 2. Install dependencies
-Not necessary on MX Linux.
-```bash
-sudo apt update
-sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
-```
-##### 3. Add GPG key
-```bash
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-```
-##### 4. Add Docker repo
-```bash
-sudo vi /etc/apt/sources.list
-# add at end of file: deb [arch=amd64] https://download.docker.com/linux/debian buster stable
-sudo apt update
-```
-On MX Linux the file to update:
-```bash
-cd /etc/apt/sources.list.d/
-sudo vi mx.list
-```
+
 ##### 5. Install Docker
 ```bash
 sudo apt -y install docker-ce
