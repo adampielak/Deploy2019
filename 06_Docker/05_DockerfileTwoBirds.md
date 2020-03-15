@@ -1,3 +1,6 @@
+Example Dockerfile for TwoBirds JS.
+
+```bash
 FROM electronuserland/builder:latest
 
 # verifications
@@ -17,3 +20,4 @@ RUN grunt
 
 WORKDIR dist/tb
 RUN ls -1 | awk -vpath=$PWD/ '{print path$1}'
+```
