@@ -15,7 +15,7 @@ docker run -it --rm alpine # /bin/ash, defaults to sh
 # --rm , remove container after stop
 ```
 ## Detaching from container 
-Ctrl-P Ctrl-Q
+Ctrl-P Ctrl-Q or `exit`.
 ## Docker image creation
 ```bash
 # pulls image, creates container
