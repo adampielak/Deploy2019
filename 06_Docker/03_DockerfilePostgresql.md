@@ -1,3 +1,6 @@
+Dockerfile for PostgreSQL install.
+
+```bash
 # pull base image.
 FROM ubuntu:18.04
 
@@ -18,3 +21,4 @@ ENV PATH $PATH:/usr/lib/postgresql/$PG_MAJOR/bin
 
 EXPOSE 5432
 # CMD ["postgres"]
+```
