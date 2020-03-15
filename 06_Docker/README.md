@@ -106,7 +106,7 @@ docker images -q |xargs docker rmi -f
 docker rmi <img ID>
 ```
 ## Docker Containers <a name="cont"></a> ([Up](#top))
-### Create container based on created image
+### Create container based on image
 #### Create network using macvlan driver to connect from other host
 ```bash
 docker network create -d macvlan --subnet=192.168.1.0/24 --ip-range=192.168.1.128/25 --gateway=192.168.1.127 -o parent=enp4s0 macnet
