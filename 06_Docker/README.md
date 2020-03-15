@@ -1,7 +1,14 @@
-# Docker: Debian 10 Installation
-* [Prerequisites](#prere) <a name="top"></a>
-* [Install - GPG Key](#key) <a name="top"></a>
-* [Install - Docker Repo](#repo) <a name="top"></a>
+# Docker: Debian 10 Installation <a name="top"></a>
+* [Prerequisites](#prere) 
+* [Install - GPG Key](#key) 
+* [Install - Docker Repo](#repo) 
+* [Install - Docker](#idocker) 
+* [Configuration](#config)
+* [Getting Started](#start) 
+* [Dockerfile](#file)
+* [Docker Image](#image) 
+* [Docker Containers](#cont) 
+* [Troubleshooting](#tshoot) 
 
 ## Prerequisites <a name="prere"></a> 
 * 64b OS
@@ -21,7 +28,6 @@ https://medium.com/@betz.mark/ten-tips-for-debugging-docker-containers-cde4da841
 https://medium.com/@chemidy/create-the-smallest-and-secured-golang-docker-image-based-on-scratch-4752223b7324
 https://towardsdatascience.com/key-kubernetes-commands-741fe61fde8
 ```
-
 ## Install - Add GPG Key <a name="key"></a> ([Up](#top))
 ```bash
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
@@ -37,7 +43,7 @@ On MX Linux the file to update:
 cd /etc/apt/sources.list.d/
 sudo vi mx.list
 ```
-## Install Docker 
+## Install - Docker <a name="idocker"></a> ([Up](#top))
 ### Install Docker Community Edition:
 ```bash
 sudo apt -y install docker-ce
@@ -48,7 +54,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
-## Configuration
+## Configuration <a name="config"></a> ([Up](#top))
 ### Make current user not use sudo
 Change will take place after full logout / log off.
 ```bash
@@ -68,15 +74,14 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 systemctl show --property=Environment docker
 ```
-
-## Operations
+## Getting Started <a name="start"></a> ([Up](#top))
 ### Start Docker
 ```bash
 # check first
 systemctl show --property ActiveState docker
 sudo dockerd &
 ```
-## Dockerfile
+## Dockerfile <a name="file"></a> ([Up](#top))
 ### Create docker file
 The dockerfile name should be Dockerfile.
 ```bash
@@ -84,7 +89,7 @@ vi Dockerfile
 # ex.
 # FROM basex/basexhttp:9.1
 ```
-## Docker Image
+## Docker Image <a name="image"></a> ([Up](#top))
 ### Create docker image based on a Docker file
 ```bash
 sudo docker build - < Dockerfile
@@ -100,7 +105,7 @@ docker images -q |xargs docker rmi -f
 # or
 docker rmi <img ID>
 ```
-## Docker Containers
+## Docker Containers <a name="cont"></a> ([Up](#top))
 ### Create container based on created image
 #### Create network using macvlan driver to connect from other host
 ```bash
@@ -176,8 +181,8 @@ To actually publish the port when running the container, use the -p flag on dock
 ports, or the -P flag to publish all exposed ports and map them to high-order ports.
 See: https://docs.docker.com/engine/examples/running_ssh_service/ .
 
-## Troubleshooting
-Masked docker service:
+## Troubleshooting <a name="tshoot"></a> ([Up](#top))
+Masked docker service:<br/>
 a. unmask 
 ```bash
 systemctl unmask docker.service
