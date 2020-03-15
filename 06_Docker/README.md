@@ -178,12 +178,12 @@ The EXPOSE instruction does not actually publish the port.
 It functions as a type of documentation between the person who builds the image and the person who runs the container,
 about which ports are intended to be published. 
 To actually publish the port when running the container, use the -p flag on docker run to publish and map one or more 
-ports, or the -P flag to publish all exposed ports and map them to high-order ports.
+ports, or the -P flag to publish all exposed ports and map them to high-order ports.<br/>
 See: https://docs.docker.com/engine/examples/running_ssh_service/ .
 
 ## Troubleshooting <a name="tshoot"></a> ([Up](#top))
 Masked docker service:<br/>
-a. unmask 
+Unmask 
 ```bash
 systemctl unmask docker.service
 systemctl unmask docker.socket
