@@ -4,14 +4,14 @@ Add environment variables for default bash shell in.
 ```bash
 vi $HOME/.bashrc
 export GO111MODULE=on
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin # for test system: export PATH=$PATH:$HOME/go/bin
 # if not working try $HOME/.profile
 ```
 ## GO download and install
 From https://golang.org/dl/ .
 ```bash
 wget https://dl.google.com/go/go1.14.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.14.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.14.linux-amd64.tar.gz # for test system: tar -xzf go1.14.linux-amd64.tar.gz
 ```
 Verify:
 ```bash
