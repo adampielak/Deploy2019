@@ -1,4 +1,5 @@
-### 1. vim settings for user
+# VIM: First Steps
+## Settings for user
 ```bash
 vi ~/.vimrc
 # add
@@ -6,11 +7,7 @@ set number
 syntax on
 colo industry
 ```
-*delete multiple lines:
-```bash
-:[start_line_no],[end_line_no]d
-```
-Install plugin manager:
+## Install plugin manager
 ```bash
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.vim/autoload
@@ -26,11 +23,16 @@ Plug 'sheerun/vim-polyglot'
 Plug 'trevordmiller/nova-vim'
 call plug#end()
 ```
-install plugins:
+## Install plugins
 ```bash
 vim
 :PlugStatus
 :PlugInstall
 :PlugUpdate
 :PlugUpgrade
+```
+## How To
+### Delete multiple lines
+```bash
+:[start_line_no],[end_line_no]d
 ```
