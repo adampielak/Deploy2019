@@ -1,12 +1,13 @@
-### Environment variables
-Add environment variables for default bash shell in:
+# GO: Installation and First Steps
+## Environment variables
+Add environment variables for default bash shell in.
 ```bash
 vi $HOME/.bashrc
 export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin
 # if not working try $HOME/.profile
 ```
-### GOLANG download 
+## GO download and install
 From https://golang.org/dl/ .
 ```bash
 wget https://dl.google.com/go/go1.14.linux-amd64.tar.gz
@@ -20,7 +21,7 @@ For gotest to work enable execution on /tmp:
 ```bash
 sudo vi /etc/fstab
 ```
-remove noexec from tmp. save and remount tmp:
+Remove noexec from tmp. Save and remount tmp.
 ```bash
 sudo mount -o remount /tmp
 ```
@@ -28,12 +29,12 @@ Verify:
 ```bash
 mount |grep /tmp
 ```
-### Upgrade GO version
-Remove previous version first:
+## Upgrade GO version
+### Remove previous version first.
 ```bash
 sudo rm -r $GOROOT
 ```
-Download and unzip new version:
+### Download and unzip new version.
 ```bash
 tar -C $HOME -xzf <new version>
 ```
